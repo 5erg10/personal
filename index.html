@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="es"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="es"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="es"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="es"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="es"><!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Sergio Santamaría Fajardo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="design diseño html css jquery" />
+        <meta name="keywords" content="css3, css-only, fullscreen, background, slideshow, images, content" />
+        <meta name="author" content="Sergio Santamaria Fajardo" />
+        <link rel="shortcut icon" href="images/icono5.png"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+		</noscript>
+    </head>
+    <body id="page">
+	<div id="modal" class="modalmask">
+			<div id="contenido" class="modalbox">
+					<a id="cerrar" title="Close" class="close">X</a>
+			</div>
+	</div>
+	<div id="modal2" class="modalmask">
+			<div id="contenido2" class="modalbox">
+					<a id="cerrar2" title="Close" class="close">X</a>
+			</div>
+	</div>
+	<div id="modal3" class="modalmask">
+			<div id="contenido3" class="modalbox">
+					<a id="cerrar3" title="Close" class="close">X</a>
+			</div>
+	</div>
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3>in·nov·at·ion</h3></div></li>
+            <li><span>Image 02</span><div><h3>des-ing</h3></div></li>
+            <li><span>Image 03</span><div><h3>in-ves-tiga-tion</h3></div></li>
+            <li><span>Image 04</span><div><h3>bal·ance</h3></div></li>
+            <li><span>Image 05</span><div><h3>tech-nol-ogy</h3></div></li>
+            <li><span>Image 06</span><div><h3>dev-elo-pe</h3></div></li>
+        </ul>
+		<!-- Home -->
+		<div id="home" class="content">
+			<h2></h2>
+		</div>
+		<!-- /Home -->
+		<!-- About -->
+		<div id="biografia" class="panel">
+			<div class="content">
+				<h2>Biografía</h2>
+				<p>Desde 1996 que cree mi primera web de manera autodidacta usando solo HTML y un bloc de notas, he dedicado todo mi tiempo libre a investigar y aprender cada una de las nuevas tecnologías que iban apareciendo aplicadas al diseño web para hacer más sofisticadas mis páginas o las páginas web que me pedían amigos y conocidos.</br></br>
+				Para cada pagina web que me disponía a hacer buscaba siempre lo último que se usaba en diseño con la intención de aprender y de que mis páginas quedasen más "bonitas". Así, a medida que iban apareciendo, aprendí de manera autodidacta a emplear plantillas XML, DTD o XHML que junto con HTML y CSS se denominó más tarde Web 1.0. Mas adelante aprendí PHP y javascript y sus sucesivas actualizaciones y frameworks que dotaban a las páginas de dinamismo e interactividad, algo impensable años atrás y que se paso a denominar Web 2.0.</br></br>
+				No fue hasta muchos años más tarde cuando me plantee convertir mi afición en mi profesión. Me desligue de la agencia de publicidad en la que habia trabajado toda mi vida y comence a cursar las titulaciones de técnico superior en diseño de aplicaciones web y técnico superior en administración de sistemas informáticos en red, subiendo un peldaño más en sofisticación y operatividad de las páginas web que diseñaba, una versatilidad tal que me permite hacer lo que más me gusta, pintar lienzos en la web.</br></br>
+				Actualmente para el diseño de paginas web utilizo como base tecnológica HTML5, CSS3 (recurriendo en ocasiones a librerías como bootstrap) y el framwork AngularJS (Jquery y AJAX embebido) de javascript para el frontend y el framework PHALCON de PHP y MySQLi como gestor de bases de datos para la parte de backend. Tecnologias algunas de reciente aparición que dotan a las páginas web de una gran rapidez de proceso, una estetica atractiva y diseños 100% responsive adaptables y escalables.</br></br></br></br></p>
+			</div>
+		</div>
+		<!-- /About -->
+		<!-- perfil -->
+		<div id="perfil" class="panel">
+			<div class="content">
+				<h2>Perfil</h2>
+				<!--<div class="modalmask"><div id="mascara"></div></div>-->
+				<div id="va-accordion" class="va-container">
+					<div class="va-nav">
+						<span class="va-nav-prev">Previous</span>
+						<span class="va-nav-next">Next</span>
+					</div>
+					<div class="va-wrapper" style="background:#f9e830;">
+						<div class="va-slice va-slice-1">
+							<h3 class="va-title">Estudios</h3>
+							<div class="va-content">
+								<p>2000 - 2005 : Licenciatura en publicidad y RR.PP.<a id="abrirmodal">+ info</a></p>
+							</div>
+							</br>
+							<div class="va-content">
+								<p>2010 - 2012 : Técnico superior en programación de aplicaciones web.<a id="abrirmodal2">+ info</a></p>
+							</div>
+							</br>
+							<div class="va-content">
+								<p>2010 - 2014 : Técnico superior en administracion de sistemas operativos.<a id="abrirmodal3">+ info</a></p>
+							</div>
+						</div>
+						<div class="va-slice va-slice-2">
+							<h3 class="va-title">Aficiones</h3>
+							<div class="va-content">
+								<p>Sergio Santamaria</p>
+								<ul>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Portfolio</a></li>
+									<li><a href="#">Contact</a></li>
+								</ul>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Perfil -->
+		<!-- experiencia -->
+		<div id="experiencia" class="panel">
+			<div class="content">
+				<h2>Experiencia</h2>
+				<div id="va-accordion2" class="va-container">
+					<div class="va-nav">
+						<span class="va-nav-prev">Previous</span>
+						<span class="va-nav-next">Next</span>
+					</div>
+					<div class="va-wrapper" style="background:#f9e830;">
+						<div class="va-slice va-slice-3">
+							<h3 class="va-title">Laboral</h3>
+							<div class="va-content">
+								<p>2000 - 2005 : Vendedor en Dpto. de informática. Media Markt<a href="#">+ info</a></p>
+							</div>
+							</br>
+							<div class="va-content">
+								<p>2010 - 2012 : Copy y redactor publicitario. 'Bassat&ogilvy'<a href="#">+ info</a></p>
+							</div>
+							</br>
+							<div class="va-content">
+								<p>2012 - 2014 : Programador BackEnd. Nanonino<a href="#">+ info</a></p>
+							</div>
+						</div>
+						<div class="va-slice va-slice-4">
+							<h3 class="va-title">Extra laboral</h3>
+							<div class="va-content">
+								<p>2000 - 2005 : Licenciatura en publicidad y RR.PP.<a href="#">+ info</a></p>
+							</div>
+							</br>
+							<div class="va-content">
+								<p>2010 - 2012 : Técnico superior en programación de aplicaciones web.<a href="#">+ info</a></p>
+							</div>
+							</br>
+							<div class="va-content">
+								<p>2010 - 2014 : Técnico superior en administracion de sistemas operativos.<a href="#">+ info</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /experiencia -->
+		<!-- perfil -->
+		<div id="aptitudes" class="panel">
+			<div class="content">
+				<h2>Aptitudes</h2>
+						<div class="html5 chart" data-percent="85">
+							<span class="percent"></span>
+							</span>
+								<div>
+									<h3><b>HTML 5</b></h3>
+								</div>
+						</div>
+						<div class="css chart" data-percent="90">
+							<span class="percent"></span>
+								<div>
+									<h3><b>CSS 3</b></h3>
+								</div>
+						</div>
+						<div class="javascript chart" data-percent="73">
+							<span class="percent"></span>
+								<div>
+									<h3><b>JavaScript</b></h3>
+								</div>
+						</div>
+						<div class="php chart" data-percent="65">
+							<span class="percent"></span>
+								<div>
+									<h3><b>PHP</b></h3>
+								</div>
+						</div>
+						<div class="Mysql chart" data-percent="92">
+							<span class="percent"></span>
+								<div>
+									<h3><b>MySQL</b></h3>
+								</div>
+						</div>
+						<div class="wordpress chart" data-percent="80">
+							<span class="percent"></span>
+								<div>
+									<h3><b>WordPress</b></h3>
+								</div>
+						</div><div class="joomla chart" data-percent="60">
+							<span class="percent"></span>
+								<div>
+									<h3><b>Joomla!</b></h3>
+								</div>
+						</div><div class="magento chart" data-percent="40">
+							<span class="percent"></span>
+								<div>
+									<h3><b>MAGENTO</b></h3>
+								</div>
+						</div>
+						<div class="prestashop chart" data-percent="55">
+							<span class="percent"></span>
+								<div>
+									<h3><b>PrestaShop</b></h3>
+								</div>
+						</div>
+						<div class="seo chart" data-percent="20">
+							<span class="percent"></span>
+								<div>
+									<h3><b>SEM /SEO</b></h3>
+								</div>
+						</div>
+			</div>
+		</div>
+		<!-- /Perfil -->
+		<!-- Portfolio -->
+		<div id="portfolio" class="panel">
+			<div class="content">
+				<h2>Portfolio</h2>
+				<div id="ei_menu" class="ei_menu">
+					<ul>
+						<li>
+							<a href="#" class="pos1">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h3>SYNERGY-ITC</h3>
+								<p>
+								Proyecto elaborado para una empresa de estados unidos dedicada a la gestion de centros educativos
+								primarios y superiores.
+								</p>
+								<p>
+								La web esta concebida como una plataforma en la cual los profesores pueden crear sus clases e incluir a los alumnos inscritos en ellas,
+								asignarles tareas, temarios y exámenes que estos podran realizar online y gestionar e imprimer informes autogenerados en pdf con los
+								resultados y dinamicas de sus estudiantes.
+								</p>
+								<p>
+								Los alumnos por su lado recibiran notificaciones sobre las tareas y examenes y podran visionar online los temarios consistentes en videos interactivos
+								y realizar las pruebas clasificatorias cuyos resultados recibira el profesor para su evaluación.
+								</p>
+								<p>
+								debido a la conception de la web como una plataforma cais enteramente operativa, practicamente no recurro a HTML para la programacion y diseño, si no que recurri al framework CORE de PHP, jquery y AJAX con un recurso masivo de la base de datos MySQL. 
+								</p>
+								<div id="boton"><img src="images/iconos/playbw.png"></img><a href="http://www.fajardoweb.tk/synergy-itc" target="_blank">ver demo </a></div>
+								</br></br></br></br>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos2">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h3>WATERALL</h3>
+								<p>
+								Proyecto encargado por una empresa radicada en Estados Unidos que quiere abrir una linea de negocio vendiendo un dispositivo que 
+								controlo via online el riego de los jardines.
+								</p>
+								<p>
+								A traves de la web, una vez instalado el dispositivo en el domicilio, se puede dar de alta, asignarle un nombre, habilitar y gestionar los canales 
+								 decidiendo un modo de funcionamiento automatico, esquematico o manual de riego, eliminar o borrar dispositivos o canales, obtener informacion metereologica de la zona donde esta instalado el dispositivo y que asi este configure un sistema de riego automatico, etc.
+								</p>
+								<p>
+								La plataforma esta diseñada empleando HTML5 y CSS3 con libreria bootstrap para el FRONTEND, framework AngularJS de javascript para la funcionalidad y el framework PHALCON de PHP y una base de datos SQL para la gestion de informacion en el BACKEND.
+								</p>
+								<div id="boton"><img src="images/iconos/playbw.png"></img><a href="http://www.fajardoweb.tk/waterall" target="_blank">ver demo </a></div>
+								</br></br></br></br>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos3">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h3>CALESSE</h3>
+								<p>
+								Proyecto actualmente en construccion para una empresa que va a iniciar un negocio de diseño y venta de mascaras tanto como complemento a indumentaria como elemento decorativo para inmuebles. 
+								</p>
+								<p>
+								Se trata de una web funcionalmente muy sencilla cuyo proposito en un principio esta dirigido a branding e imagen de marca, exposicion de diseños y medio de contacto. Por ello más que la funcionalidad lo que se pedia era una pagina en la que prima exclusivamente el diseño estetico.
+								</p>
+								<p>
+								Para el desarrollo de la pagina, el cliente solicito expresamente que se utilizase un gestor de contenidos y que les enseñasemos a manejar el gestor seleccionado para que ellos mismos, o bien una tercera empresa, se pueda hacer cargo en el futuro de la gestion de la pagina.
+								</p>
+								<p>
+								bajo estas condiciones, seleccione Wordpress como gestor de contenidos, y para ello cree una plantilla propia previamente elaborada que posteriormente integre en la plataforma de wordpress.
+								</p>
+								<div id="boton"><img src="images/iconos/playbw.png"></img><a href="http://www.fajardoweb.tk/calesse" target="_blank">ver demo </a></div>
+								</br></br></br></br>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos4">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h3>Personal-child</h3>
+								<p>
+								Version anterior de mi pagina personal.
+								</p>
+								<p>
+								Con un tono mas desenfadado, cuando realice esa versaion de mi pagina quise experimentar con los efectos rotoscopicos en la transicion de las vistas, modals multifuncionales e investigar en el uso de la libreria CSS bootstrap.
+								</p>
+								<p>
+								Para la elaboracion de esta version de mi pagina recurri a HTML5, la libreria bootstrap de CSS3 y Jquery.
+								</p>
+								<div id="boton"><img src="images/iconos/playbw.png"></img><a href="http://www.fajardoweb.tk/personal" target="_blank">ver demo </a></div>
+								</br></br></br></br>
+							</div>
+						</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		<!-- /Portfolio -->
+		<!-- Contact -->
+		<div id="contact" class="panel">
+			<div class="content">
+				<div class="mapa">
+					<script src="http://maps.google.com/maps/api/js?sensor=false&callback=iniciar"></script>
+					<script>
+							function iniciar() {
+								var mapOptions = {
+									center: new google.maps.LatLng(38.427090, -0.395452),
+									zoom: 18,
+									mapTypeId: google.maps.MapTypeId.SATELLITE};
+								var map = new google.maps.Map(document.getElementById("map"),mapOptions);}
+					</script>
+					<div class="map-cont" id="map">
+					</div>
+				</div>
+				<form class="formulario" id="myForm" name="form_signup" action="enviar.php" method="post" autocomplete="off">
+										<div>
+											<div><label>Nombre</label></div>
+											<div>
+												<input class="cajas" type="text" name="nombre" id="nombre" class="form-control">
+											</div>
+										</div>
+										<div>
+											<div><label>Empresa</label></div>
+											<div>
+												<input class="cajas" type="text" name="empresa" id="empresa" class="form-control">
+											</div>
+										</div>
+										<div>
+											<div><label>Consulta</label></div>
+											<div>
+												<textarea class="cajas" cols=26 rows=5 name="consulta" id="consulta" class="form-control"></textarea>
+											</div>
+										</div>
+										<div>
+											<div><label>Correo</label></div>
+											<div >
+												<input class="cajas" type="email" name="email" id="email" class="form-control">
+											</div>
+										</div>
+										<div>
+										<div><input class="boton-enviar" type="submit" id="submit_button" value="Enviar"></input><img id="loader_gif" src="images/cargando.gif" style=" height: 50px; width: 50px; float: rigth; display:none;"></img></div>
+											<div id="dialog" title="Titulo dialog" style="display:none; overflow: hidden">
+												<div><h3 style="text-align: center;">Mensaje enviado</h3></div>
+											</div>
+										</div>
+				</form>
+			</div>
+		</div>
+		<!-- /Contact -->
+		<!-- Header with Navigation -->
+		<div id="header">
+			<h1>Sergio Santamaria Fajardo</h1>
+			<!--id="navigation"--> 
+			<ul id="bmenu">
+				<li><a id="link-home" href="#home">Home</a></li>
+				<li><a id="link-biografia" href="#biografia">biografía</a></li>
+				<li><a id="link-perfil" href="#perfil">Perfil</a></li>
+				<li><a id="link-experiencia" href="#experiencia">Experiencia</a></li>
+				<li><a id="cargarap" href="#aptitudes">Aptitudes</a></li>
+				<li><a id="link-portfolio" href="#portfolio">Portfolio</a></li>
+				<li><a id="link-contact" href="#contact">Contacto</a></li>
+			</ul>
+		</div>
+		<!-- librerias -->
+		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.vaccordion.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#va-accordion').vaccordion({
+					visibleSlices	: 2,
+					expandedHeight	: 420,
+					animOpacity		: 0.7,
+					animEasing		: 'easeOutBack',
+					contentAnimSpeed: 500,
+					animSpeed: 400
+				});
+			});
+			$(function() {
+				$('#va-accordion2').vaccordion({
+					visibleSlices	: 2,
+					expandedHeight	: 420,
+					animOpacity		: 0.7,
+					animEasing		: 'easeOutBack',
+					contentAnimSpeed: 500,
+					animSpeed: 400
+				});
+			});
+		</script>
+        <script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/modal.js"></script>
+		<script type="text/javascript" src="js/easypiechart.min.js"></script>
+		<!-- /librerias -->
+    </body>
+</html>
