@@ -587,9 +587,12 @@ a{
 
 
 #contact-form {
-  max-width: 90%;
-  text-align: center;
-  margin-top: 5%;
+    max-width: 80%;
+    text-align: center;
+    margin-top: 5%;
+    background: #222222;
+    padding: 80px 0px;
+    border-radius: 3px;
 }
 
 #contact-form p{
