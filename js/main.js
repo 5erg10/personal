@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
 });
+
+	document.body.style.zoom="80%"
+
 	var scaleIn = new Bounce();
 	scaleIn
 		.scale({
