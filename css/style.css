@@ -80,11 +80,11 @@ a{
 }
 
 .content{
-	left: 350px;
-	top: 0px;
-	position: absolute;
-	padding-bottom: 30px;
-	width: 80%;
+    left: 15%;
+    top: 0px;
+    position: absolute;
+    padding-bottom: 30px;
+    width: 65%;
 }
 
 .content h2{
