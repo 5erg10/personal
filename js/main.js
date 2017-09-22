@@ -1,5 +1,8 @@
 
 $(document).ready(function(){
+});
+
+
 
 	var scaleIn = new Bounce();
 	scaleIn
@@ -80,5 +83,3 @@ $(document).ready(function(){
          translateLeftOut.applyTo($(this).find('.glridElementOverText'));
          translateRightOut.applyTo($(this).find('.glridElementOverTextDesc'));
      });
-});
-
