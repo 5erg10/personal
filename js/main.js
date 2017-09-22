@@ -1,9 +1,6 @@
 
 $(document).ready(function(){
 });
-
-
-
 	var scaleIn = new Bounce();
 	scaleIn
 		.scale({
