@@ -4,9 +4,11 @@ $(document).ready(function(){
 	var scaleIn = new Bounce();
 	scaleIn
 		.scale({
-		  from: { x: 1, y: 1 },
+		  from: { x: 1.03, y: 1.03 },
 		  to: { x: 1.2, y: 1.2 },
 		  easing: "bounce",
+		  stiffness: 1,
+		  bounces: 0
 		})
 		/*.rotate({
 		  from: 0,
@@ -18,8 +20,10 @@ $(document).ready(function(){
 	scaleOut
 		.scale({
 		  from: { x: 1.2, y: 1.2 },
-		  to: { x: 1, y: 1 },
+		  to: { x: 1.03, y: 1.03 },
 		  easing: "bounce",
+		  stiffness: 1,
+		  bounces: 0
 		})
 		/*.rotate({
 		  from: 6,
@@ -33,7 +37,8 @@ $(document).ready(function(){
 		    from: { x: -300, y: 0 },
 		    to: { x: 10, y: 0 },
 		    duration: 1500,
-    		stiffness: 5
+    		stiffness: 5,
+		  	bounces: 0
 		  });	
 
 	var translateLeftOut = new Bounce();
@@ -42,7 +47,8 @@ $(document).ready(function(){
 		    from: { x: 10, y: 0 },
 		    to: { x: -300, y: 0 },
 		    duration: 1500,
-    		stiffness: 5
+    		stiffness: 5,
+		  	bounces: 0
 		  });	
 
 	var translateRightIn = new Bounce();
@@ -51,7 +57,8 @@ $(document).ready(function(){
 		    from: { x: 500, y: 0 },
 		    to: { x: 0, y: 0 },
 		    duration: 1500,
-    		stiffness: 5
+    		stiffness: 5,
+		  	bounces: 0
 		  });	
 
 	var translateRightOut = new Bounce();
@@ -60,16 +67,15 @@ $(document).ready(function(){
 		    from: { x: 0, y: 0 },
 		    to: { x: 500, y: 0 },
 		    duration: 1500,
-    		stiffness: 5
+    		stiffness: 5,
+		  	bounces: 0
 		  });		
 
 	var $grid = $('.grid').imagesLoaded( function() {
-	  // init Masonry after all images have loaded
-	  $grid.masonry({
-	  // options...
-		  itemSelector: '.grid-item',
-		  gutter: 10,
-		  columnWidth: 200
+		$grid.masonry({
+		    itemSelector: '.grid-item',
+			gutter: 10,
+			columnWidth: 200
 		});
 	});
 
@@ -87,3 +93,79 @@ $(document).ready(function(){
          translateLeftOut.applyTo($(this).find('.glridElementOverText'));
          translateRightOut.applyTo($(this).find('.glridElementOverTextDesc'));
      });
+
+    /*new AnimOnScroll( document.getElementById( 'grid' ), {
+		minDuration : 0.4,
+		maxDuration : 0.7,
+		viewportFactor : 0.2
+	} );*/
+
+// -----  CONTACT FORM -----
+
+function resizeInput() {
+    $(this).attr('size', $(this).val().length);
+}
+
+$('input[type="text"], input[type="email"]')
+    // event handler
+    .keyup(resizeInput)
+    // resize on page load
+    .each(resizeInput);
+
+
+//console.clear();
+// Adapted from georgepapadakis.me/demo/expanding-textarea.html
+(function(){
+  
+  var textareas = document.querySelectorAll('.expanding'),
+      
+      resize = function(t) {
+        t.style.height = 'auto';
+        t.style.overflow = 'hidden'; // Ensure scrollbar doesn't interfere with the true height of the text.
+        t.style.height = (t.scrollHeight + t.offset ) + 'px';
+        t.style.overflow = '';
+      },
+      
+      attachResize = function(t) {
+        if ( t ) {
+          console.log('t.className',t.className);
+          t.offset = !window.opera ? (t.offsetHeight - t.clientHeight) : (t.offsetHeight + parseInt(window.getComputedStyle(t, null).getPropertyValue('border-top-width')));
+
+          resize(t);
+
+          if ( t.addEventListener ) {
+            t.addEventListener('input', function() { resize(t); });
+            t.addEventListener('mouseup', function() { resize(t); }); // set height after user resize
+          }
+
+          t['attachEvent'] && t.attachEvent('onkeyup', function() { resize(t); });
+        }
+      };
+  
+  // IE7 support
+  if ( !document.querySelectorAll ) {
+  
+    function getElementsByClass(searchClass,node,tag) {
+      var classElements = new Array();
+      node = node || document;
+      tag = tag || '*';
+      var els = node.getElementsByTagName(tag);
+      var elsLen = els.length;
+      var pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)");
+      for (i = 0, j = 0; i < elsLen; i++) {
+        if ( pattern.test(els[i].className) ) {
+          classElements[j] = els[i];
+          j++;
+        }
+      }
+      return classElements;
+    }
+    
+    textareas = getElementsByClass('expanding');
+  }
+  
+  for (var i = 0; i < textareas.length; i++ ) {
+    attachResize(textareas[i]);
+  }
+  
+})();
