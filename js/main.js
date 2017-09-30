@@ -7,11 +7,12 @@ $(document).ready(function(){
 		  from: { x: 1, y: 1 },
 		  to: { x: 1.2, y: 1.2 },
 		  easing: "bounce",
-		}).rotate({
+		})
+		/*.rotate({
 		  from: 0,
 		  to: 6,
 		  easing: "bounce",
-		});
+		});*/
 
 	var scaleOut = new Bounce();
 	scaleOut
@@ -19,11 +20,12 @@ $(document).ready(function(){
 		  from: { x: 1.2, y: 1.2 },
 		  to: { x: 1, y: 1 },
 		  easing: "bounce",
-		}).rotate({
+		})
+		/*.rotate({
 		  from: 6,
 		  to: 0,
 		  easing: "bounce",
-		});
+		});*/
 
 	var translateLeftIn = new Bounce();
 	translateLeftIn
@@ -61,11 +63,16 @@ $(document).ready(function(){
     		stiffness: 5
 		  });		
 
-	$('#grid').masonry({
+	var $grid = $('.grid').imagesLoaded( function() {
+	  // init Masonry after all images have loaded
+	  $grid.masonry({
 	  // options...
-	  itemSelector: '.grid-item',
-	  columnWidth: 200
+		  itemSelector: '.grid-item',
+		  gutter: 10,
+		  columnWidth: 200
+		});
 	});
+
     $(".grid-item").mouseenter(function(){
          console.log($(this).children('div'));
          $(this).find('.gridElementOver').addClass( "gridElementOverActive" );
