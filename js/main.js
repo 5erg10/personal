@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+	document.body.style.zoom="80%"
 });
 	var scaleIn = new Bounce();
 	scaleIn
@@ -10,11 +11,12 @@ $(document).ready(function(){
 		  stiffness: 1,
 		  bounces: 0
 		})
-		/*.rotate({
+		.rotate({
 		  from: 0,
-		  to: 6,
+		  to: 3,
 		  easing: "bounce",
-		});*/
+		  bounces: 0
+		});
 
 	var scaleOut = new Bounce();
 	scaleOut
@@ -25,11 +27,12 @@ $(document).ready(function(){
 		  stiffness: 1,
 		  bounces: 0
 		})
-		/*.rotate({
-		  from: 6,
+		.rotate({
+		  from: 3,
 		  to: 0,
 		  easing: "bounce",
-		});*/
+		  bounces: 0
+		});
 
 	var translateLeftIn = new Bounce();
 	translateLeftIn
