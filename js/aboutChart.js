@@ -11,7 +11,7 @@ var margin = {
   top: 10,
   right: 100,
   bottom: 0,
-  left: -100
+  left: -200
 }
 
 var nodes = [];
