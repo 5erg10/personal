@@ -104,6 +104,21 @@ var node = svg.selectAll("circle")
         //.attr("r", d.radius);
     })
     .on("click", function (d) {
+      if(currentBubble) {
+        currentBubble.attr("r", d.radius);
+        currentBubble.transition()
+        .ease("cubic-out")
+        .duration("500")
+        .tween('radius', function(d) {
+            var i = d3.interpolate(200, d.originalRadius);
+            return function(t) {
+              d.radius = i(t);
+              currentBubble.attr('r', function(d) { return d.originalRadius; });
+              force.nodes(nodes)
+            }
+          });
+        force.start();
+      }
       d3.select(this).transition()
         .ease("cubic-out")
         .duration("500")
@@ -140,11 +155,12 @@ function labels(foci) {
     .attr("class", "label")
     .attr("style", "cursor:default")
     .attr("style", "font-weight: normal")
+    .attr("style", "color: #222222")
     .style("font-size", function (d) {
-      return height/40;
+      return height/20;
     })
     .style("cursor", "pointer")
-    .attr("fill", "white")
+    .attr("fill", "#222222")
     .text(function (d) {
       return d.nombre
     })
