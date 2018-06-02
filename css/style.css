@@ -142,6 +142,13 @@ a{
 	border-left: solid 5px #ffcb00;
 }
 
+.enObrasImage{
+    position: absolute;
+    width: 75px;
+    top: 100px;
+    left: 75px;
+}
+ 
 .homeTittle{
     position: absolute;
     font-size: 35px;

@@ -221,13 +221,12 @@ $("#status-options ul li").click(function() {
 	$("#status-options").removeClass("active");
 });
 
-function answerMessage(newText){
+function answerMessage(){
 
 	$('<li class="replies"><img src="images/serImg.png" alt="" /><p>' + ".  .  ." + '</p></li>').appendTo($('.messages ul'));
 	$('.message-input input').val(null);
 	$('.contact.active .preview').html('<span>You: </span>' + ". . .");
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
-	setTimeout(function(){ $(".messages ul li:last-child p").html(newText) }, 2000)
 	
 }
 
@@ -240,9 +239,47 @@ function newMessage() {
 	$('.message-input input').val(null);
 	$('.contact.active .preview').html('<span>You: </span>' + message);
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
-	setTimeout( answerMessage, 1000, "todavia estoy aprendiendo, pronto podre responder a tus preguntas como es debido :-)" )
-	//answerMessage("todavia estoy aprendiendo, pronto podre responder a esa pregunta como es debido!!");
+	answerMessage();
+	languageProcessing(message);
 };
+
+function languageProcessing(textToProcess){
+	$.ajax({
+		  url: 'https://api.wit.ai/message',
+		  data: {
+		    'q': textToProcess,
+		    'access_token' : 'IZFJGGKXCYK7ZZMHWV35WRW2777JWWLH'
+		  },
+		  dataType: 'jsonp',
+		  method: 'GET',
+		  success: function(response) {
+		  	if( response.entities.intent ) { 
+		  		console.log("entidad: ",response);
+		  		console.log("intencion: ",response.entities.intent[0].value);
+		  	  	if( response.entities.contact ) nameValue = response.entities.contact[0].value;
+			  	switch(response.entities.intent[0].value) {
+			  		case 'saludo':
+				   		$(".messages ul li:last-child p").html("Buenos dias, ¿tienes una pregunta para mi?");
+				        break;  
+				    case 'unity':
+				    	 console.log(response.entities.intent[0].value);
+				    	 $(".messages ul li:last-child p").html("¿quieres saber cosas de "+response.entities.intent[0].value+"?");
+				    	 break;  
+				    case 'jquery':
+				    	 console.log(response.entities.intent[0].value);
+				    	 $(".messages ul li:last-child p").html("¿quieres saber cosas de "+response.entities.intent[0].value+"?");
+				    	 break;  
+				    case 'angularJS':
+				    	 console.log(response.entities.intent[0].value);
+				    	 $(".messages ul li:last-child p").html("¿quieres saber cosas de "+response.entities.intent[0].value+"?");
+				    	 break;
+				    default:
+				    	 $(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que todavia no entiendo, pero gracias a ti he aprendido algo nuevo ;-)");	        
+			  	}
+			}
+		}
+	});
+}
 
 $('.submit').click(function() {
   newMessage();
