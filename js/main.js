@@ -221,15 +221,25 @@ $("#status-options ul li").click(function() {
 	$("#status-options").removeClass("active");
 });
 
+function answerMessage(newText){
+
+	$('<li class="replies"><img src="images/serImg.png" alt="" /><p>' + newText + '</p></li>').appendTo($('.messages ul'));
+	$('.message-input input').val(null);
+	$('.contact.active .preview').html('<span>You: </span>' + newText);
+	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+}
+
 function newMessage() {
 	message = $(".message-input input").val();
 	if($.trim(message) == '') {
 		return false;
 	}
-	$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+	$('<li class="sent"><img src="images/anonimous.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
 	$('.message-input input').val(null);
 	$('.contact.active .preview').html('<span>You: </span>' + message);
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+	setTimeout( answerMessage, 5000, "todavia estoy aprendiendo, pronto podre responder a tus preguntas como es debido :-)" )
+	//answerMessage("todavia estoy aprendiendo, pronto podre responder a esa pregunta como es debido!!");
 };
 
 $('.submit').click(function() {

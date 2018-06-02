@@ -1044,7 +1044,6 @@ small {
   float: left;
   margin: 15px 15px 5px 15px;
   width: calc(100% - 25px);
-  font-size: 0.9em;
 }
 #frame .chatContent .messages ul li:nth-last-child(1) {
   margin-bottom: 20px;
@@ -1079,7 +1078,7 @@ small {
 }
 @media screen and (min-width: 735px) {
   #frame .chatContent .messages ul li p {
-    max-width: 300px;
+    max-width: 500px;
   }
 }
 #frame .chatContent .message-input {
