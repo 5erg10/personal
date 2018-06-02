@@ -1000,22 +1000,24 @@ small {
 }
 #frame .chatContent .contact-profile {
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: 90px;
+    line-height: 90px;
     border-bottom: solid 3px #333333;
     color: #333333;
+    font-size: 20px;
 }
 #frame .chatContent .contact-profile img {
-  width: 40px;
+  width: 85px;
   border-radius: 50%;
   float: left;
-  margin: 9px 12px 0 9px;
+  margin: 0px 20px 0px 9px;
 }
 #frame .chatContent .contact-profile p {
   float: left;
 }
 #frame .chatContent .contact-profile .social-media {
   float: right;
+  font-size: 20px;
 }
 #frame .chatContent .contact-profile .social-media i {
   margin-left: 14px;
