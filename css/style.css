@@ -1065,13 +1065,13 @@ small {
   color: #333333;
 }
 #frame .chatContent .messages ul li img {
-  width: 22px;
+  width: 35px;
   border-radius: 50%;
   float: left;
 }
 #frame .chatContent .messages ul li p {
   display: inline-block;
-  padding: 1% 10%;
+  padding: 1% 10% 1% 2%;
   border-radius: 20px;
   max-width: 205px;
   line-height: 130%;

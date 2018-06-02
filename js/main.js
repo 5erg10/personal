@@ -223,10 +223,12 @@ $("#status-options ul li").click(function() {
 
 function answerMessage(newText){
 
-	$('<li class="replies"><img src="images/serImg.png" alt="" /><p>' + newText + '</p></li>').appendTo($('.messages ul'));
+	$('<li class="replies"><img src="images/serImg.png" alt="" /><p>' + ".  .  ." + '</p></li>').appendTo($('.messages ul'));
 	$('.message-input input').val(null);
-	$('.contact.active .preview').html('<span>You: </span>' + newText);
+	$('.contact.active .preview').html('<span>You: </span>' + ". . .");
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+	setTimeout(function(){ $(".messages ul li:last-child p").html(newText) }, 2000)
+	
 }
 
 function newMessage() {
@@ -238,7 +240,7 @@ function newMessage() {
 	$('.message-input input').val(null);
 	$('.contact.active .preview').html('<span>You: </span>' + message);
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
-	setTimeout( answerMessage, 5000, "todavia estoy aprendiendo, pronto podre responder a tus preguntas como es debido :-)" )
+	setTimeout( answerMessage, 1000, "todavia estoy aprendiendo, pronto podre responder a tus preguntas como es debido :-)" )
 	//answerMessage("todavia estoy aprendiendo, pronto podre responder a esa pregunta como es debido!!");
 };
 
