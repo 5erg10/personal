@@ -999,10 +999,11 @@ small {
   }
 }
 #frame .chatContent .contact-profile {
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  background: #e6b704;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid 3px #333333;
+    color: #333333;
 }
 #frame .chatContent .contact-profile img {
   width: 40px;

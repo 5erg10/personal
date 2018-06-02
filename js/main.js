@@ -272,6 +272,10 @@ function languageProcessing(textToProcess){
 				    case 'angularJS':
 				    	 console.log(response.entities.intent[0].value);
 				    	 $(".messages ul li:last-child p").html("¿quieres saber cosas de "+response.entities.intent[0].value+"?");
+				    	 break;  
+				    case 'reactJS':
+				    	 console.log(response.entities.intent[0].value);
+				    	 $(".messages ul li:last-child p").html("¿quieres saber cosas de "+response.entities.intent[0].value+"?");
 				    	 break;
 				    default:
 				    	 $(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que todavia no entiendo, pero gracias a ti he aprendido algo nuevo ;-)");	        
