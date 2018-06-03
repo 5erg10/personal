@@ -702,12 +702,6 @@ a{
 .no-cssanimations .cb-slideshow li span{
 	opacity: 1;
 }
-@media screen and (max-width: 1140px) { 
-	.cb-slideshow li div h3 { font-size: 100px }
-}
-@media screen and (max-width: 600px) { 
-	.cb-slideshow li div h3 { font-size: 50px }
-}
 
 
 /* ------ CONTACT FORM --------*/
@@ -974,12 +968,6 @@ small {
 	min-height: 300px;
 	margin-left: 20%;
 }
-@media screen and (max-width: 360px) {
-  #frame {
-    width: 100%;
-    height: 100vh;
-  }
-}
 #frame .chatContent {    
 	float: left;
     width: 60%;
@@ -987,17 +975,6 @@ small {
     overflow: hidden;
     position: relative;
     top: 5%;
-}
-@media screen and (max-width: 735px) {
-  #frame .chatContent {
-    width: calc(100% - 58px);
-    min-width: 300px !important;
-  }
-}
-@media screen and (min-width: 900px) {
-  #frame .chatContent {
-    width: calc(100% - 340px);
-  }
 }
 #frame .chatContent .contact-profile {
     width: 100%;
@@ -1013,6 +990,7 @@ small {
   float: left;
   margin: 0px 20px 0px 9px;
 }
+
 #frame .chatContent .contact-profile p {
   float: left;
 }
@@ -1036,11 +1014,6 @@ small {
   max-height: calc(100% - 93px);
   overflow-y: scroll;
   overflow-x: hidden;
-}
-@media screen and (max-width: 735px) {
-  #frame .chatContent .messages {
-    max-height: calc(100% - 105px);
-  }
 }
 #frame .chatContent .messages::-webkit-scrollbar {
   width: 8px;
@@ -1087,11 +1060,6 @@ small {
   max-width: 205px;
   line-height: 130%;
 }
-@media screen and (min-width: 735px) {
-  #frame .chatContent .messages ul li p {
-    max-width: 500px;
-  }
-}
 #frame .chatContent .message-input {
   position: absolute;
   bottom: 0;
@@ -1109,11 +1077,6 @@ small {
     color: #32465a;
     text-align: left;
     background: #ffffff47;
-}
-@media screen and (max-width: 735px) {
-  #frame .chatContent .message-input .wrap input {
-    padding: 15px 32px 16px 8px;
-  }
 }
 #frame .chatContent .message-input .wrap input:focus {
   outline: none;
@@ -1148,12 +1111,6 @@ small {
   opacity: .5;
   cursor: pointer;
 }
-@media screen and (max-width: 735px) {
-  #frame .chatContent .message-input .wrap .attachment {
-    margin-top: 17px;
-    right: 65px;
-  }
-}
 #frame .chatContent .message-input .wrap .attachment:hover {
   opacity: 1;
 }
@@ -1167,14 +1124,76 @@ small {
   background: #333333;
   color: #f5f5f5;
 }
-@media screen and (max-width: 735px) {
-  #frame .chatContent .message-input .wrap button {
-    padding: 16px 0;
-  }
-}
+
 #frame .chatContent .message-input .wrap button:hover {
   background: #435f7a;
 }
 #frame .chatContent .message-input .wrap button:focus {
   outline: none;
 }
+
+@media screen and (max-width: 735px) {
+  #frame .chatContent .message-input .wrap input {
+    padding: 15px 32px 16px 8px;
+  }
+  #frame .chatContent .messages {
+    max-height: calc(100% - 105px);
+  }
+  #frame .chatContent {
+    width: calc(100% - 58px);
+    min-width: 300px !important;
+  }
+  #frame .chatContent .message-input .wrap .attachment {
+    margin-top: 17px;
+    right: 65px;
+  }
+  #frame .chatContent .message-input .wrap button {
+    padding: 16px 0;
+  }
+}
+
+@media screen and (min-width: 735px) {
+	#frame .chatContent .messages ul li p {
+	  max-width: 500px;
+	  font-size: 22px;
+	}
+	#frame .chatContent .message-input .wrap button {
+	    width: 80px;
+	    height: 80px;
+	    font-size: 25px;
+	}
+	#frame .chatContent .message-input .wrap input {
+	  height: 80px;
+	  font-size: 32px;
+      width: calc(100% - 80px);
+	}
+}
+
+@media screen and (min-width: 900px) {
+  #frame .chatContent {
+    width: calc(100% - 340px);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #frame {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1140px) { 
+	.cb-slideshow li div h3 { font-size: 100px }
+	.enObrasImage {
+	    top: 225px;
+	    left: 150px;
+	}
+}
+@media screen and (max-width: 600px) { 
+	.cb-slideshow li div h3 { font-size: 50px }
+}
+
+
+
+
+
