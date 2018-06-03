@@ -110,14 +110,9 @@ a{
 #navigation a{
 	color: #ccc;
 	display: block;
-	/*background: #fff;
-	background: rgba(255,255,255,0.9);*/
 	line-height: 50px;
 	padding: 0px 20px 0px 12px;
 	text-transform: uppercase;
-	/*margin-top: 6px;*/
-	/*box-shadow: 1px 1px 2px rgba(0,0,0,0.2);*/
-	/*font-size: 14px;*/
 	box-sizing: border-box;
 	border-left: solid 0px #ffcb00;
 	-webkit-transition: all .2s ease-in-out;
@@ -1010,8 +1005,8 @@ small {
 }
 #frame .chatContent .messages {
   height: auto;
-  min-height: calc(100% - 93px);
-  max-height: calc(100% - 93px);
+  min-height: calc(100% - 175px);
+  max-height: calc(100% - 175px);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -1057,7 +1052,7 @@ small {
   display: inline-block;
   padding: 1% 10% 1% 2%;
   border-radius: 20px;
-  max-width: 205px;
+  max-width: 500px;
   line-height: 130%;
 }
 #frame .chatContent .message-input {
@@ -1133,46 +1128,47 @@ small {
 }
 
 @media screen and (max-width: 735px) {
-  #frame .chatContent .message-input .wrap input {
-    padding: 15px 32px 16px 8px;
-  }
-  #frame .chatContent .messages {
-    max-height: calc(100% - 105px);
-  }
-  #frame .chatContent {
-    width: calc(100% - 58px);
-    min-width: 300px !important;
-  }
-  #frame .chatContent .message-input .wrap .attachment {
-    margin-top: 17px;
-    right: 65px;
-  }
-  #frame .chatContent .message-input .wrap button {
-    padding: 16px 0;
-  }
-}
-
-@media screen and (min-width: 735px) {
-	#frame .chatContent .messages ul li p {
-	  max-width: 500px;
-	  font-size: 22px;
-	}
+    #frame .chatContent .message-input .wrap input {
+      padding: 15px 32px 16px 8px;
+    }
+    #frame .chatContent .messages {
+      max-height: calc(100% - 105px);
+    }
+    #frame .chatContent {
+      width: calc(100% - 58px);
+      min-width: 300px !important;
+    }
+    #frame .chatContent .message-input .wrap .attachment {
+      margin-top: 17px;
+      right: 65px;
+    }
+    #frame .chatContent .message-input .wrap button {
+      padding: 16px 0;
+    }
 	#frame .chatContent .message-input .wrap button {
 	    width: 80px;
-	    height: 80px;
+	    height: 60px;
 	    font-size: 25px;
 	}
 	#frame .chatContent .message-input .wrap input {
-	  height: 80px;
-	  font-size: 32px;
-      width: calc(100% - 80px);
+	  height: 60px;
+	  font-size: 23px;
+	  width: calc(100% - 80px);
+	}
+	#frame .chatContent .messages ul li p {
+	  max-width: 350px;
+	  font-size: 22px;
 	}
 }
 
+@media screen and (min-width: 735px) {
+	
+}
+
 @media screen and (min-width: 900px) {
-  #frame .chatContent {
-    width: calc(100% - 340px);
-  }
+	#frame .chatContent {
+	  width: calc(100% - 340px);
+	}
 }
 
 @media screen and (max-width: 360px) {
