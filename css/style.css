@@ -1071,7 +1071,7 @@ small {
     height: 45px;
     color: #32465a;
     text-align: left;
-    background: #ffffff47;
+    background: #ffffff20;
 }
 #frame .chatContent .message-input .wrap input:focus {
   outline: none;
@@ -1079,22 +1079,22 @@ small {
 
 #frame .chatContent .message-input .wrap input::-webkit-input-placeholder {
   text-align: left;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(120, 120, 120, 1);
 }
 
 #frame .chatContent .message-input .wrap input:-moz-placeholder {
   text-align: left;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(120, 120, 120, 1);
 }
 
 #frame .chatContent .message-input .wrap input::-moz-placeholder {
   text-align: left;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(120, 120, 120, 1);
 }
 
 #frame .chatContent .message-input .wrap input:-ms-input-placeholder {
   text-align: left;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(120, 120, 120, 1);
 }
 #frame .chatContent .message-input .wrap .attachment {
   position: absolute;
