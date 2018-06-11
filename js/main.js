@@ -319,10 +319,10 @@ function languageProcessing(textToProcess){
 				   		$(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
 				        break;  
 				    case 'experiencia':
-				    	 if(tecnologiaConsultada)$(".messages ul li:last-child p").html("¿quieres saber mi experiencia de "+tecnologiaConsultada+"?");
+				    	 if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Seria interesante hablarte de mi experiencia en "+tecnologiaConsultada+", pero todavia no tengo una respuesta concreta. Seguire trabajando en ello.");
 				    	 break;  
 				    case 'proyectos':
-				    	 if(tecnologiaConsultada)$(".messages ul li:last-child p").html("¿quieres saber en que proyectos de "+tecnologiaConsultada+" he trabajado?");
+				    	 if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Me encantaria relacionarte una lista de todos los proyectos con "+tecnologiaConsultada+" en los que he trabajado, pero todavia mi creador no me la ha facilitado -_-.");
 				    	 break;  
 				    case 'despedida':
 				    	 $(".messages ul li:last-child p").html("¿nos vemos pronto?");
