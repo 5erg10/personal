@@ -268,6 +268,15 @@ $("#status-options ul li").click(function() {
 	$("#status-options").removeClass("active");
 });
 
+function getMoment(hour){
+	var currentMoment = "";
+	if ( hour > 4 && hour < 15 ) currentMoment = "Buenos dias";
+	else if ( hour >= 15 && hour < 20 ) currentMoment = "Buenas tardes";
+	else currentMoment = "Buenas noches";
+
+	return currentMoment;
+}
+
 function answerMessage(){
 
 	$('<li class="replies"><img src="images/serImg.png" alt="" /><p>' + ".  .  ." + '</p></li>').appendTo($('.messages ul'));
@@ -300,14 +309,14 @@ function languageProcessing(textToProcess){
 		  dataType: 'jsonp',
 		  method: 'GET',
 		  success: function(response) {
-		  	console.log(response);
+		  	console.log("response: ", response);
+		  	console.log(new Date().getHours())
 		  	if( response.entities.intent ) { 
-		  		console.log("entidad: ",response);
 		  		console.log("intencion: ",response.entities.intent[0].value);
 		  		if(response.entities.tec_type) tecnologiaConsultada = response.entities.tec_type[0].value;
 			  	switch(response.entities.intent[0].value) {
 			  		case 'saludo':
-				   		$(".messages ul li:last-child p").html("Buenos dias, ¿tienes una pregunta para mi?");
+				   		$(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
 				        break;  
 				    case 'experiencia':
 				    	 if(tecnologiaConsultada)$(".messages ul li:last-child p").html("¿quieres saber mi experiencia de "+tecnologiaConsultada+"?");
@@ -322,6 +331,7 @@ function languageProcessing(textToProcess){
 				    	 $(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que todavia no entiendo, pero gracias a ti he aprendido algo nuevo ;-)");	        
 			  	}
 			}
+		  	else if( response._text == "hola" ) $(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
 			else $(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que todavia no entiendo, pero gracias a ti he aprendido algo nuevo ;-)");
 		}
 	});
