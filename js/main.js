@@ -197,7 +197,7 @@ function composeTidy()
   $('#send-button').removeClass('disabled');*/
 }
 
-function sendMessage(headers_obj, message, callback)
+/*function sendMessage(headers_obj, message, callback)
 {
   var email = '';
 
@@ -230,7 +230,7 @@ $(".formButton").on("click", function(event){
 
 $("#contact-form").submit(function(event){
 	console.log(event);
-});
+});*/
 
 //----------- Chat logic ----------
 
