@@ -316,23 +316,26 @@ function languageProcessing(textToProcess){
 		  		if(response.entities.tec_type) tecnologiaConsultada = response.entities.tec_type[0].value;
 			  	switch(response.entities.intent[0].value) {
 			  		case 'saludo':
-				   		$(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
+				   			$(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
 				        break;  
 				    case 'experiencia':
-				    	 if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Seria interesante hablarte de mi experiencia en "+tecnologiaConsultada+", pero todavia no tengo una respuesta concreta. Seguire trabajando en ello.");
-				    	 break;  
-				    case 'proyectos':
-				    	 if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Me encantaria relacionarte una lista de todos los proyectos con "+tecnologiaConsultada+" en los que he trabajado, pero todavia mi creador no me la ha facilitado -_-.");
-				    	 break;  
+								if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Seria interesante hablarte de mi experiencia en "+tecnologiaConsultada+", pero todavia estoy pensando en la mejor forma de responderte. Seguire trabajando en ello.");
+								break;    
+						case 'proyectos':
+								if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Seria interesante hablarte de mi experiencia en "+tecnologiaConsultada+", pero todavia estoy pensando en la mejor forma de responderte. Seguire trabajando en ello.");
+								break;  
+				    case 'opciones':
+								$(".messages ul li:last-child p").html("Puedes preguntarme por la experiencia que tiene Sergio en una tecnologia concreto o por los proyectos en los que ha trabajado usando esta misma, y yo te respondere como buenamente pueda :-).");
+								break;  
 				    case 'despedida':
-				    	 $(".messages ul li:last-child p").html("¿nos vemos pronto?");
-				    	 break;
+								$(".messages ul li:last-child p").html("¿nos vemos pronto?");
+								break;
 				    default:
-				    	 $(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que todavia no entiendo, pero gracias a ti he aprendido algo nuevo ;-)");	        
+				    	 	$(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que aún no entiendo, pero gracias a ti iré mejorando!! ;-)");	        
 			  	}
 			}
-		  	else if( response._text == "hola" ) $(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
-			else $(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que todavia no entiendo, pero gracias a ti he aprendido algo nuevo ;-)");
+		  	else if( response._text.toLowerCase() == "hola" || response._text.toLowerCase() == "hola sergio" ) $(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
+			else $(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que aún no entiendo, pero gracias a ti iré mejorando!! ;-)");
 		}
 	});
 }
