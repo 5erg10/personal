@@ -989,7 +989,7 @@ small {
   font-size: 1.5rem;
 }
 
-.social-media {
+.social-buttons {
   margin-left: 80px;
   display: flex;
   align-items: center;
@@ -997,7 +997,7 @@ small {
   font-size: 1.5rem;
 }
 
-.social-media a {
+.social-buttons a {
   margin-left: 3rem;
   cursor: pointer;
 }
