@@ -9,13 +9,20 @@ body {
 	background: #ffcb00;
 	overflow: hidden;
 	font-weight: 400;
-	font-size: 15px;
+	font-size: 16px;
 	color: #fff;
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-family: 'Roboto Slab', serif;
 	text-rendering: optimizeLegibility;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 	-webkit-font-smoothing: antialiased;
+  margin:0;
+	padding:0;
+}
+
+p, textarea, input, ul, li {
+  margin: 0px;
+  padding: 0px;
 }
 
 ::-webkit-scrollbar {
@@ -50,12 +57,6 @@ body {
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
-}
-
-/* CSS reset */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
-	margin:0;
-	padding:0;
 }
 
 ol,ul {
@@ -198,7 +199,7 @@ a{
 	height: 98%;
 	overflow-y: auto;
 	overflow-x: hidden;
-	margin-top: -200%;
+	margin-top: -600%;
 	position: absolute;
 	background: #000;
 	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
@@ -215,9 +216,6 @@ a{
 }
 
 .backImage{
-	position: fixed;
-	width: 100%;
-	height: 100%;
 	opacity: 0.1;
 }
 
@@ -955,161 +953,133 @@ small {
 
 /*-------- Chat -----------*/
 
-
 #frame {
-	width: 95%;
-	min-width: 360px;
-	height: 100%;
-	min-height: 300px;
-	margin-left: 20%;
-}
-#frame .chatContent {    
-	float: left;
-    width: 60%;
-    height: 90%;
-    overflow: hidden;
-    position: relative;
-    top: 5%;
-}
-#frame .chatContent .contact-profile {
-    width: 100%;
-    height: 90px;
-    line-height: 90px;
-    border-bottom: solid 3px #333333;
-    color: #333333;
-    font-size: 20px;
-}
-#frame .chatContent .contact-profile img {
-  width: 85px;
-  border-radius: 50%;
-  float: left;
-  margin: 0px 20px 0px 9px;
+  width: 100%;
+  min-height: calc(100%);
+  max-height: calc(100%);
+  display: flex;
+  justify-content: flex-end;
 }
 
-#frame .chatContent .contact-profile p {
-  float: left;
+.chatContent {
+  min-height: calc(100vh);
+  max-height: calc(100vh);
+  width: 80%;
+  padding-right: 4rem;
 }
-#frame .chatContent .contact-profile .social-media {
-  float: right;
-  font-size: 20px;
+
+.contact-profile{
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  height: 100px;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
 }
-#frame .chatContent .contact-profile .social-media i {
-  margin-left: 14px;
+
+.contact-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.contact-profile p {
+  color: #000;
+  margin-left: 16px;
+  font-size: 1.5rem;
+}
+
+.social-media {
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.social-media a {
+  margin-left: 3rem;
   cursor: pointer;
 }
-#frame .chatContent .contact-profile .social-media i:nth-last-child(1) {
-  margin-right: 20px;
-}
-#frame .chatContent .contact-profile .social-media i:hover {
-  color: #435f7a;
-}
-#frame .chatContent .messages {
-  height: auto;
-  min-height: calc(100% - 175px);
-  max-height: calc(100% - 175px);
+
+.messages {
+  border-top: solid 2px #000;
+  min-height: calc(100vh);
+  max-height: calc(100vh);
   overflow-y: scroll;
   overflow-x: hidden;
 }
-#frame .chatContent .messages::-webkit-scrollbar {
+
+.messages::-webkit-scrollbar {
   width: 8px;
   background: transparent;
 }
-#frame .chatContent .messages::-webkit-scrollbar-thumb {
+
+.messages::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.3);
 }
-#frame .chatContent .messages ul li {
-  display: inline-block;
-  clear: both;
+
+.replies {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  margin: 1rem 1rem 2rem 0;
+}
+
+.replies img {
+  width: 50px;
+  border-radius: 50px;
+  margin-left: 1rem;
+}
+
+.replies p {
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.sent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 1rem 0 2rem 1rem;
+}
+
+.sent img {
+  width: 50px;
+  border-radius: 50px;
+  margin-right: 1rem;
+}
+
+.sent p {
+  background-color: rgb(41, 41, 41);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.message-input {
+  margin: 2rem 0 0 0;
+}
+
+.wrap input {
   float: left;
-  margin: 15px 15px 5px 15px;
-  width: calc(100% - 25px);
-}
-#frame .chatContent .messages ul li:nth-last-child(1) {
-  margin-bottom: 20px;
-}
-#frame .chatContent .messages ul li.sent img {
-  margin: 6px 8px 0 0;
-}
-#frame .chatContent .messages ul li.sent p {
-  background: #333333;
-  color: #f5f5f5;
-}
-#frame .chatContent .messages ul li.replies img {
-  float: right;
-  margin: 6px 0 0 8px;
-}
-#frame .chatContent .messages ul li.replies p {
-  background: #f5f5f5;
-  float: right;
-  color: #333333;
-}
-#frame .chatContent .messages ul li img {
-  width: 35px;
-  border-radius: 50%;
-  float: left;
-}
-#frame .chatContent .messages ul li p {
-  display: inline-block;
-  padding: 1% 10% 1% 2%;
-  border-radius: 20px;
-  max-width: 500px;
-  line-height: 130%;
-}
-#frame .chatContent .message-input {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 99;
-}
-#frame .chatContent .message-input .wrap {
-  position: relative;
-}
-#frame .chatContent .message-input .wrap input {
-    float: left;
-    width: calc(100% - 50px);
-    padding: 11px 32px 10px 8px;
-    height: 45px;
-    color: #32465a;
-    text-align: left;
-    background: #ffffff20;
-}
-#frame .chatContent .message-input .wrap input:focus {
-  outline: none;
+  width: calc(100% - 50px);
+  padding: 11px 32px 10px 8px;
+  height: 45px;
+  color: #32465a;
+  text-align: left;
+  background: #ffffff20;
 }
 
-#frame .chatContent .message-input .wrap input::-webkit-input-placeholder {
-  text-align: left;
-  color: rgba(120, 120, 120, 1);
-}
-
-#frame .chatContent .message-input .wrap input:-moz-placeholder {
-  text-align: left;
-  color: rgba(120, 120, 120, 1);
-}
-
-#frame .chatContent .message-input .wrap input::-moz-placeholder {
-  text-align: left;
-  color: rgba(120, 120, 120, 1);
-}
-
-#frame .chatContent .message-input .wrap input:-ms-input-placeholder {
-  text-align: left;
-  color: rgba(120, 120, 120, 1);
-}
-#frame .chatContent .message-input .wrap .attachment {
-  position: absolute;
-  right: 60px;
-  z-index: 4;
-  margin-top: 10px;
-  font-size: 1.1em;
-  color: #435f7a;
-  opacity: .5;
-  cursor: pointer;
-}
-#frame .chatContent .message-input .wrap .attachment:hover {
-  opacity: 1;
-}
-#frame .chatContent .message-input .wrap button {
+.wrap button {
   float: right;
   border: none;
   width: 50px;
@@ -1120,76 +1090,21 @@ small {
   color: #f5f5f5;
 }
 
-#frame .chatContent .message-input .wrap button:hover {
-  background: #435f7a;
-}
-#frame .chatContent .message-input .wrap button:focus {
+.wrap input:focus {
   outline: none;
 }
 
-@media screen and (max-width: 735px) {
-    #frame .chatContent .message-input .wrap input {
-      padding: 15px 32px 16px 8px;
-    }
-    #frame .chatContent .messages {
-      max-height: calc(100% - 105px);
-    }
-    #frame .chatContent {
-      width: calc(100% - 58px);
-      min-width: 300px !important;
-    }
-    #frame .chatContent .message-input .wrap .attachment {
-      margin-top: 17px;
-      right: 65px;
-    }
-    #frame .chatContent .message-input .wrap button {
-      padding: 16px 0;
-    }
-	#frame .chatContent .message-input .wrap button {
-	    width: 80px;
-	    height: 60px;
-	    font-size: 25px;
-	}
-	#frame .chatContent .message-input .wrap input {
-	  height: 60px;
-	  font-size: 23px;
-	  width: calc(100% - 80px);
-	}
-	#frame .chatContent .messages ul li p {
-	  max-width: 350px;
-	  font-size: 22px;
-	}
+.wrap input::-webkit-input-placeholder {
+  text-align: left;
+  color: rgba(120, 120, 120, 1);
 }
 
-@media screen and (min-width: 735px) {
-	
+.wrap input::-moz-placeholder {
+  text-align: left;
+  color: rgba(120, 120, 120, 1);
 }
 
-@media screen and (min-width: 900px) {
-	#frame .chatContent {
-	  width: calc(100% - 340px);
-	}
+.wrap input:-ms-input-placeholder {
+  text-align: left;
+  color: rgba(120, 120, 120, 1);
 }
-
-@media screen and (max-width: 360px) {
-  #frame {
-    width: 100%;
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 1140px) { 
-	.cb-slideshow li div h3 { font-size: 100px }
-	.enObrasImage {
-	    top: 225px;
-	    left: 150px;
-	}
-}
-@media screen and (max-width: 600px) { 
-	.cb-slideshow li div h3 { font-size: 50px }
-}
-
-
-
-
-
