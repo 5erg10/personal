@@ -284,7 +284,6 @@ a{
 .glridElementOverTextDesc{
     color: white;
     font-size: 15px;
-    float: right;
     display: inline-block;
     position: absolute;
     bottom: 3%;
