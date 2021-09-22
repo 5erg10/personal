@@ -304,37 +304,34 @@ function languageProcessing(textToProcess){
 		  url: 'https://api.wit.ai/message',
 		  data: {
 		    'q': textToProcess,
-		    'access_token' : 'IZFJGGKXCYK7ZZMHWV35WRW2777JWWLH'
+		    'access_token' : 'R5ZIYOCWCGSXR57GSY7H5HNII7ESKESY'
 		  },
 		  dataType: 'jsonp',
 		  method: 'GET',
 		  success: function(response) {
-		  	console.log("response: ", response);
-		  	console.log(new Date().getHours())
-		  	if( response.entities.intent ) { 
-		  		console.log("intencion: ",response.entities.intent[0].value);
-		  		if(response.entities.tec_type) tecnologiaConsultada = response.entities.tec_type[0].value;
-			  	switch(response.entities.intent[0].value) {
+		  	if( response.entities['intent:intents'] ) { 
+		  		if(response.entities['tect_type:tect_type']) tecnologiaConsultada = response.entities['tect_type:tect_type'][0].value;
+			  	switch(response.entities['intent:intents'][0].value) {
 			  		case 'saludo':
-				   			$(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
+						$(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
 				        break;  
 				    case 'experiencia':
-								if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Seria interesante hablarte de mi experiencia en "+tecnologiaConsultada+", pero todavia estoy pensando en la mejor forma de responderte. Seguire trabajando en ello.");
-								break;    
-						case 'proyectos':
-								if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Seria interesante hablarte de mi experiencia en "+tecnologiaConsultada+", pero todavia estoy pensando en la mejor forma de responderte. Seguire trabajando en ello.");
-								break;  
+						if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Seria interesante hablarte de mi experiencia en "+tecnologiaConsultada+", pero todavia estoy pensando en la mejor forma de responderte. Seguire trabajando en ello.");
+						break;    
+					case 'proyectos':
+						if(tecnologiaConsultada)$(".messages ul li:last-child p").html("Seria interesante hablarte de mis proyectos con "+tecnologiaConsultada+", pero todavia estoy pensando en la mejor forma de responderte. Seguire trabajando en ello.");
+						break;  
 				    case 'opciones':
-								$(".messages ul li:last-child p").html("Puedes preguntarme por la experiencia que tiene Sergio en una tecnologia concreto o por los proyectos en los que ha trabajado usando esta misma, y yo te respondere como buenamente pueda :-).");
-								break;  
+						$(".messages ul li:last-child p").html("Puedes preguntarme por la experiencia que tiene Sergio en una tecnologia concreto o por los proyectos en los que ha trabajado usando esta misma, y yo te respondere como buenamente pueda :-).");
+						break;  
 				    case 'despedida':
-								$(".messages ul li:last-child p").html("¿nos vemos pronto?");
-								break;
+						$(".messages ul li:last-child p").html("¿nos vemos pronto?");
+						break;
 				    default:
-				    	 	$(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que aún no entiendo, pero gracias a ti iré mejorando!! ;-)");	        
+						$(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que aún no entiendo, pero gracias a ti iré mejorando!! ;-)");	        
 			  	}
 			}
-		  	else if( response._text.toLowerCase() == "hola" || response._text.toLowerCase() == "hola sergio" ) $(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
+		  	else if( response?._text?.toLowerCase() === "hola" || response?._text?.toLowerCase() === "hola sergio" ) $(".messages ul li:last-child p").html(getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?");
 			else $(".messages ul li:last-child p").html("Todavia me estoy entrenando y hay algunas cosas que aún no entiendo, pero gracias a ti iré mejorando!! ;-)");
 		}
 	});
