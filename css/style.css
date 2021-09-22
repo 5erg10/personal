@@ -1004,8 +1004,8 @@ small {
 
 .messages {
   border-top: solid 2px #000;
-  min-height: calc(100vh);
-  max-height: calc(100vh);
+  min-height: calc(100vh - 250px);
+  max-height: calc(100vh - 250px);
   overflow-y: scroll;
   overflow-x: hidden;
 }
