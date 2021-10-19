@@ -109,127 +109,51 @@ $(".grid-item").mouseleave(function(){
 
 // -----  CONTACT FORM -----
 
-function resizeInput() {
-    $(this).attr('size', $(this).val().length);
-}
+function showEmailConfirmLabel() {
+	$("#emailConfirmButton").addClass('show-confirm-label');
+	setTimeout(() => {
+		$("#emailConfirmButton").removeClass('show-confirm-label');
+	}, 4000);
+};
 
-$('input[type="text"], input[type="email"]')
-    // event handler
-    .keyup(resizeInput)
-    // resize on page load
-    .each(resizeInput);
+function showFormLoadingCover() {
+	$("#loadingCover").addClass('display-form-cover');
+	setTimeout(() => {
+		$("#loadingCover").addClass('show-form-cover');
+	}, 100);
+};
 
+function hideFormLoadingCover() {
+	$("#loadingCover").removeClass('show-form-cover');
+	setTimeout(() => {
+		$("#loadingCover").removeClass('display-form-cover');
+	}, 300);
+};
 
-//console.clear();
-// Adapted from georgepapadakis.me/demo/expanding-textarea.html
-(function(){
-  
-  var textareas = document.querySelectorAll('.expanding'),
-      
-      resize = function(t) {
-        t.style.height = 'auto';
-        t.style.overflow = 'hidden'; // Ensure scrollbar doesn't interfere with the true height of the text.
-        t.style.height = (t.scrollHeight + t.offset ) + 'px';
-        t.style.overflow = '';
-      },
-      
-      attachResize = function(t) {
-        if ( t ) {
-          console.log('t.className',t.className);
-          t.offset = !window.opera ? (t.offsetHeight - t.clientHeight) : (t.offsetHeight + parseInt(window.getComputedStyle(t, null).getPropertyValue('border-top-width')));
+const templateParams = (data) => {
+	return {
+		from_name: data.find(name => name.name === 'from_name').value,
+		to_name: "sergio",
+		message: data.find(name => name.name === 'message').value,
+		reply_to: data.find(name => name.name === 'reply_to').value,
+	}
+};
 
-          resize(t);
-
-          if ( t.addEventListener ) {
-            t.addEventListener('input', function() { resize(t); });
-            t.addEventListener('mouseup', function() { resize(t); }); // set height after user resize
-          }
-
-          t['attachEvent'] && t.attachEvent('onkeyup', function() { resize(t); });
-        }
-      };
-  
-  // IE7 support
-  if ( !document.querySelectorAll ) {
-  
-    function getElementsByClass(searchClass,node,tag) {
-      var classElements = new Array();
-      node = node || document;
-      tag = tag || '*';
-      var els = node.getElementsByTagName(tag);
-      var elsLen = els.length;
-      var pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)");
-      for (i = 0, j = 0; i < elsLen; i++) {
-        if ( pattern.test(els[i].className) ) {
-          classElements[j] = els[i];
-          j++;
-        }
-      }
-      return classElements;
-    }
-    
-    textareas = getElementsByClass('expanding');
-  }
-  
-  for (var i = 0; i < textareas.length; i++ ) {
-    attachResize(textareas[i]);
-  }
-  
-})();
-
-var scopesGm =
-  'https://www.googleapis.com/auth/gmail.readonly '+
-  'https://www.googleapis.com/auth/gmail.send';
-
-var clientIDGm = "703997343375-haevo6eg6ftu0t0qd71cvrnq7s0vmtp7.apps.googleusercontent.com";
-
-var clientSecretGm = "zCg0Z7fzQwH5iPznHoPawAB3";
-
-function composeTidy()
-{
-  /*$('#compose-modal').modal('hide');
-
-  $('#compose-to').val('');
-  $('#compose-subject').val('');
-  $('#compose-message').val('');
-
-  $('#send-button').removeClass('disabled');*/
-}
-
-/*function sendMessage(headers_obj, message, callback)
-{
-  var email = '';
-
-  for(var header in headers_obj)
-    email += header += ": "+headers_obj[header]+"\r\n";
-
-  email += "\r\n" + message;
-
-  var sendRequest = gapi.client.gmail.users.messages.send({
-    'userId': '703997343375-haevo6eg6ftu0t0qd71cvrnq7s0vmtp7.apps.googleusercontent.com',
-    'resource': {
-      'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
-    }
-  });
-
-  return sendRequest.execute(callback);
-}
+function sendEmail(userData) {
+	showFormLoadingCover();
+	emailjs.send('personal_email_service', 'template_csiuckg', userData)
+	.then(function(response) {
+		document.getElementById('contact-form').reset();
+		showEmailConfirmLabel();
+		hideFormLoadingCover();
+	}, function(error) {
+		console.log('FAILED...', error);
+	});
+};
 
 $(".formButton").on("click", function(event){
-	console.log("boton clickado", event);
-	sendMessage(
-	    {
-	      'To': "laramona@gmailto.com",
-	      'Subject': "soy sexy"
-	    },
-	    "aque soy sexy ah?",
-	    composeTidy
-    )
+	sendEmail(templateParams($("form").serializeArray()));
 })
-
-$("#contact-form").submit(function(event){
-	console.log(event);
-});*/
 
 //----------- Chat logic ----------
 

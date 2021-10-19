@@ -833,6 +833,47 @@ small {
   opacity: 0;
 }
 
+.confirm-label {
+  font-size: 30px;
+  color: rgb(75, 197, 102);
+  font-style: italic;
+  font-family: 'Roboto Slab', serif;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.show-confirm-label {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form-loading-cover {
+  position: absolute;
+  top: 0;
+  background-color: #040404c7;
+  width: 80%;
+  height: 90%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.display-form-cover {
+  display: flex;
+}
+
+.show-form-cover {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form-loading-cover > img {
+  width: 40px;
+  height: 40px;
+}
+
 .website {
   opacity: 1;
   font-size: 16px;

@@ -243,33 +243,37 @@
 		<div id="contact" class="panel">
 			<div class="backImage"><img style="width: 100%; position: absolute; bottom: 0;" src="images/mail.png"/></div>
 			<div class="content">
-				<form id="contact-form" name="contact" method="POST" netlify>
+				<form id="contact-form" method="POST">
 					<p>Hola Sergio,</p>
 					<p>Mi
-						<label for="your-name">nombre</label> es
-					    <input type="text" name="your-name" id="your-name" minlength="3" placeholder="(tu nombre aquí)" required> y</p>
+						<label for="from_name">nombre</label> es
+					    <input type="text" name="from_name" id="from_name" minlength="3" placeholder="(tu nombre aquí)" required> y</p>
 
 					<p>mi
 					    <label for="email">correo electrónico</label> es
-					    <input type="email" name="your-email" id="email" placeholder="(tu correo aquí)" required>
+					    <input type="email" name="reply_to" id="email" placeholder="(tu correo aquí)" required>
 					</p>
 
 					<p>Tengo un
-					    <label for="your-message">mensaje</label> para ti,</p>
+					    <label for="message">mensaje</label> para ti,</p>
 
 					<p>
-					    <textarea name="your-message" id="your-message" placeholder="(Tu mensaje aquí)" class="expanding" required></textarea>
+					    <textarea name="message" id="your-message" placeholder="(Tu mensaje aquí)" class="expanding" required></textarea>
 					</p>
 					<p>
-					    <button class="formButton">
-					      <svg version="1.1" class="send-icn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="36px" viewBox="0 0 100 36" enable-background="new 0 0 100 36" xml:space="preserve">
+					    <button class="formButton" type="button" value="send">
+					      <svg version="1.1" class="send-icn" x="0px" y="0px" width="100px" height="36px" viewBox="0 0 100 36" enable-background="new 0 0 100 36">
 					        <path d="M100,0L100,0 M23.8,7.1L100,0L40.9,36l-4.7-7.5L22,34.8l-4-11L0,30.5L16.4,8.7l5.4,15L23,7L23.8,7.1z M16.8,20.4l-1.5-4.3
 						l-5.1,6.7L16.8,20.4z M34.4,25.4l-8.1-13.1L25,29.6L34.4,25.4z M35.2,13.2l8.1,13.1L70,9.9L35.2,13.2z" />
 					      </svg>
 					      <small style="font-size: 30px; color: rgba(150, 150, 150, 1);font-style: italic;font-family: 'Roboto Slab', serif;">Enviar</small>
+						  <div id="emailConfirmButton" class="confirm-label">Mensaje enviado</div>
 					    </button>
 					</p>
 				</form>
+				<div id="loadingCover" class="form-loading-cover">
+					<img src="images/simple-spinner.gif" class="loading-spinner"/>
+				</div>
 			</div>
 		</div>
 		<!-- /Contact -->
@@ -304,6 +308,12 @@
 		<script src="js/masonry.pkgd.min.js"></script>
 		<script src="js/underscore-min.js"></script>
 		<script src="js/d3.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function(){
+				emailjs.init("user_y4LrT2IydWZGoZjfuM9FL");
+			})();
+		</script>
 		<script src="js/main.js"></script>
 		<!--<script src="js/aboutChart.js"></script>-->
 	</body>
