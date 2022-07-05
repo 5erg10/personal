@@ -5,12 +5,19 @@ html, body {
 }
 
 body {
+  --alpha: 0.8;
+  --main-yelow-color: #ffe26d;
+  --main-black-color: #141414;
+  --main-white-color: #ffffff;
+  --main-white-transparent-color: #ffffff60;
+  --scroolbar-light: #d3b953;
+  --scrollbar-dark: #bd9e24;
 	width: 100%;
-	background: #ffcb00;
+	background: var(--main-yelow-color);
 	overflow: hidden;
 	font-weight: 400;
 	font-size: 16px;
-	color: #fff;
+	color: var(--main-white-color);
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-family: 'Roboto Slab', serif;
 	text-rendering: optimizeLegibility;
@@ -33,27 +40,29 @@ p, textarea, input, ul, li {
   width: 0px;
   height: 0px;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #dfb300;
-  border: 0px none #ffffff;
+  border: 0px none var(--main-white-color);
   border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #caa200;
+  background: var(--scroolbar-dark);
 }
 ::-webkit-scrollbar-thumb:active {
-  background: #caa200;
+  background: var(--scroolbar-dark);
 }
 ::-webkit-scrollbar-track {
-  background: #d7ac00;
-  border: 0px none #ffffff;
+  background: var(--scroolbar-light);
+  border: 0px none var(--main-white-color);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-track:hover {
-  background: #d7ac00;
+  background: var(--scroolbar-light);
 }
 ::-webkit-scrollbar-track:active {
-  background: #d7ac00;
+  background: var(--scroolbar-light);
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
@@ -74,7 +83,7 @@ h1,h2,h3,h4,h5,h6 {
 
 a{
 	text-decoration: none;
-	color: #333333;
+	color: var(--main-black-color);
 }
 
 /* ------- Nav menu -----*/
@@ -85,10 +94,10 @@ a{
   height: 50px;
 	position: absolute;
 	top: 0px;
-	border-bottom: solid 1px #ffcb00;
+	border-bottom: solid 1px var(--main-yelow-color);
 	overflow: hidden;
 	box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-	background-color: #333333;
+	background-color: var(--main-black-color);
 }
 
 #navigation {
@@ -101,7 +110,7 @@ a{
 }
 
 #navigation > a {
-  color: #ffcb00;
+  color: var(--main-yelow-color);
   height: 100%;
   width: 100%;
   text-align: center;
@@ -155,9 +164,9 @@ a{
   font-size: 35px;
   font-weight: 100;
   padding: 10px 25px;
-  border: solid 3px #ffcb00;
+  border: solid 1px var(--main-yelow-color);
   display: inline-block;
-  color: #ffcb00;
+  color: var(--main-yelow-color);
   z-index: 198;
 }
 
@@ -170,7 +179,7 @@ a{
 	overflow-x: hidden;
 	top: -98%;
 	position: absolute;
-	background: #000;
+	background: var(--main-black-color);
 	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
@@ -181,7 +190,7 @@ a{
 
 .panel:target{
 	top: 0%;
-	background-color: #ffcb00;
+	background-color: var(--main-yelow-color);
 }
 
 .backImage{
@@ -245,18 +254,18 @@ a{
 }
 
 .glridElementOverText{
-  color: white;
+  color: var(--main-white-color);
   font-size: 25px;
   margin-top: 30px;
   margin-left: 30px;
   display: inline-block;
   width: 60%;
   padding: 5px 0px;
-  border-bottom: solid 2px white;
+  border-bottom: solid 2px var(--main-white-color);
 }
 
 .glridElementOverTextDesc{
-  color: white;
+  color: var(--main-white-color);
   font-size: 15px;
   display: inline-block;
   padding: 20px 60px 20px 30px;
@@ -466,7 +475,7 @@ a{
   position: relative;
   box-sizing: border-box;
   text-align: center;
-  background: #222222;
+  background: var(--main-black-color);
   padding: 5%;
   border-radius: 3px;
   width: 100%;
@@ -495,7 +504,7 @@ input {
   font-family: 'Roboto Slab', serif;
   font-style: italic;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 1);
+  color: var(--main-white-color);
   padding: 0.5rem;
   border: 2px dashed rgba(255, 255, 255, 0);
   box-sizing: border-box;
@@ -506,6 +515,7 @@ textarea {
   text-align: left;
   overflow: auto;
   resize: none;
+  margin-top: 10px;
   width: 90%;
   border-color: rgba(255, 255, 255, 0);
   font-family: 'Roboto Slab', serif;
@@ -514,7 +524,7 @@ textarea {
 
 textarea:focus {
   background-color: rgba(255, 255, 255, 0.2);
-  border: 2px dashed rgba(255, 255, 255, 1);
+  border: 2px dashed var(--main-white-color);
 }
 
 textarea:focus:required:valid {
@@ -536,7 +546,7 @@ textarea:required {
 }
 
 input:focus {
-  border-bottom: 2px dashed rgba(255, 255, 255, 1);
+  border-bottom: 2px dashed var(--main-white-color);
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -545,7 +555,7 @@ input:required:valid {
 }
 
 input:required:invalid {
-  color: rgba(240, 76, 76, 0.5);
+  color: rgba(240, 76, 76, 1);
 }
 
 ::-webkit-input-placeholder {
@@ -615,7 +625,7 @@ small {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #040404c7;
+  background-color: var(--main-black-color);
   width: 100%;
   height: 100%;
   display: none;
@@ -642,7 +652,7 @@ small {
 .website {
   opacity: 1;
   font-size: 16px;
-  color: white;
+  color: var(--main-white-color);
   position: relative;
   text-align: center;
   display: block;
@@ -651,7 +661,7 @@ small {
 }
 
 .website a {
-  color: white;
+  color: var(--main-white-color);
 }
 
 /*-------- Chat -----------*/
@@ -677,19 +687,10 @@ small {
 }
 
 .messages {
-  border-top: solid 2px #000;
+  border-top: solid 2px var(--main-black-color);
   height: calc(100% - 125px);
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-.messages::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
-}
-
-.messages::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .replies, .sent {
@@ -717,13 +718,13 @@ small {
 }
 
 .replies p {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--main-white-color);
+  color: var(--main-black-color);
 }
 
 .sent p {
-  background-color: rgb(41, 41, 41);
-  color: rgb(255, 255, 255);
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
 }
 
 .message-input {
@@ -741,9 +742,9 @@ small {
   height: 100%;
   width: 100%;
   padding: 11px 32px 10px 8px;
-  color: #32465a;
+  color: var(--main-black-color);
   text-align: left;
-  background: #ffffff20;
+  background-color: var(--main-white-transparent-color);
   font-size: 1rem;
 }
 
@@ -753,8 +754,8 @@ small {
   width: 45px;
   font-size: 18px;
   cursor: pointer;
-  background: #333333;
-  color: #f5f5f5;
+  background: var(--main-black-color);
+  color: var(--main-white-color);
 }
 
 .message-input input:focus {
