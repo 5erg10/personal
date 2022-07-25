@@ -152,22 +152,35 @@ a{
 /* ---------- title --------*/
 
 #home {
+  position: relative;
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-top: dashed 1px var(--main-yelow-color);
+  border-bottom: dashed 1px var(--main-yelow-color);
   width: 100%;
-  height: 100%;
   z-index: 198;
+  padding: 2rem;
+  margin-top: 10%;
+  box-sizing: border-box;
 }
 
-.homeTittle{
-  font-size: 35px;
+.homeParagraph1 {
+  font-size: 1.5rem;
   font-weight: 100;
-  padding: 10px 25px;
-  border: solid 1px var(--main-yelow-color);
   display: inline-block;
   color: var(--main-yelow-color);
   z-index: 198;
+  margin: 2rem 0rem;
+}
+
+.homeImage {
+  position: relative;
+  width: 250px;
+  border: solid 1rem var(--main-black-color);
 }
 
 /* ---------- Content Box ------- */
@@ -205,6 +218,12 @@ a{
   top: 0;
   position: absolute;
   padding: calc(50px + 3%) 5% 0 5%;
+}
+
+.section-back-image {
+  width: 100%; 
+  position: absolute; 
+  bottom: 0px;
 }
 
 /* ------ grid effect -------*/
@@ -778,6 +797,14 @@ small {
 }
 
 @media (max-width: 800px) {
+  #home {
+    margin-top: 20%;
+  }
+
+  .homeParagraph1 {
+    font-size: 1rem;
+  }
+
   .messages {
     height: calc(100% - 110px);
   }

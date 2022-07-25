@@ -4,7 +4,24 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 	$( ".homeTittle" ).css("font-size", "18px");
 }
 
-var tecnologiaConsultada;
+let tecnologiaConsultada;
+
+// -----  EXPERTISE PROYECTS -----
+
+$( document ).ready(function() {
+	const projectsData = expertiseData.getProjects();
+	projectsData.map( (project, index) => {
+		$(`#column${index%3+1}`).append(`
+			<a class="grid-item" href="${project.link}" target="_blanck">
+				<img class="resizeImage" src="${project.image}" alt="${project.title}"/>
+				<div class="gridElementOver">
+					<div class="glridElementOverText">${project.title}</div>
+					<div class="glridElementOverTextDesc">${project.description}</div>
+				</div>
+			</a>
+		`);
+	});
+});
 
 // -----  CONTACT FORM -----
 
@@ -91,7 +108,7 @@ $("#status-options ul li").click(function() {
 });
 
 function getMoment(hour){
-	var currentMoment = "";
+	let currentMoment = "";
 	if ( hour > 4 && hour < 15 ) currentMoment = "Buenos dias";
 	else if ( hour >= 15 && hour < 20 ) currentMoment = "Buenas tardes";
 	else currentMoment = "Buenas noches";
