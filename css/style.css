@@ -214,7 +214,7 @@ a{
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-  left: 0;
+  right: 0;
   top: 0;
   position: absolute;
   padding: calc(50px + 3%) 5% 0 5%;
@@ -716,17 +716,23 @@ small {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 1rem 1rem 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .replies {
   flex-direction: row-reverse;
 }
 
-.replies img, .sent img {
+.replies img {
   width: 50px;
   border-radius: 50px;
-  margin: 0 1rem;
+  margin: 0 0 0 1rem;
+}
+
+.sent img {
+  width: 50px;
+  border-radius: 50px;
+  margin: 0 1rem 0 0;
 }
 
 .replies p, .sent p {
