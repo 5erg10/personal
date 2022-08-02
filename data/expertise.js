@@ -1,6 +1,6 @@
 //,odule "expertise-module"
 
-const expertiseData = {
+export default {
     projectsList: [
         {
             image: "images/lince.jpg",
@@ -15,14 +15,14 @@ const expertiseData = {
             title: "Clever Landing",
             link: "https://5erg10.github.io/cleverLanding",
             description: "Landing de la plataforma de agentes inteligentes <b>CLEVER</b>",
-            techs: [{ tech: "angularJS", complexity: "70"}, { tech: "greenshock", complexity: "60"}],
+            techs: [{ tech: "angularjs", complexity: "70"}, { tech: "greenshock", complexity: "60"}],
             areas: ["front"],
             year: "2015"
         },{
             image: "images/react.jpg",
             title: "React JS Test",
             link: "https://5erg10.github.io/reactTest",
-            description: "Webapp desarrollada en <b>ReactJS</b> con propositos de analisis de rendimiento y viabilidad en producción.",
+            description: "prototipo web desarrollado en <b>ReactJS</b> con propositos de analisis de rendimiento y viabilidad en producción.",
             techs: [{ tech: "reactjs", complexity: "70"}],
             areas: ["front"],
             year: "2016"
@@ -38,7 +38,7 @@ const expertiseData = {
             image: "images/vrLabs.png",
             title: "VR Office",
             link: "https://5erg10.github.io/vrOffice",
-            description: "Oficina virtual e interactiva en entorno WebVR con ThreeJS (Abre la WebApp desde un dispositivo movil para disfrutar de la experiencia inmersiva ;-) ).",
+            description: "Prototipo de oficina virtual e interactiva en entorno WebVR con ThreeJS (Abre la WebApp desde un dispositivo movil para disfrutar de la experiencia inmersiva ;-) ).",
             techs: [{ tech: "threejs", complexity: "80"}],
             areas: ["front", "vr"],
             year: "2017"
@@ -62,7 +62,7 @@ const expertiseData = {
             image: "images/arkit.jpg",
             title: "arKit",
             link: "https://5erg10.github.io/ArKitDocu/",
-            description: "Web documentación relacionada con varios proyectos realizados con el SDK de realidad aumentada de ARKit de Apple.",
+            description: "HomePage y Web documentación relacionada con varios proyectos realizados con el SDK de realidad aumentada de ARKit de Apple.",
             techs: [{ tech: "arkit", complexity: "60"},{ tech: "socketio", complexity: "80"}],
             areas: ["front", "ar"],
             year: "2014"
@@ -78,8 +78,8 @@ const expertiseData = {
             image: "images/d3Vis.jpg",
             title: "D3 Visualization",
             link: "https://5erg10.github.io/word2Vec/#/about",
-            description: "Visualización del estado del arte de las tecnologias y su madurez realizado en AngularJS con D3JS.",
-            techs: [{ tech: "angularJS", complexity: "60"}],
+            description: "Prototipo de visualización del estado del arte de las tecnologias y su madurez realizado en AngularJS con D3JS.",
+            techs: [{ tech: "angularjs", complexity: "60"}],
             areas: ["front", "data-visualization"],
             year: "2015"
         },{
@@ -102,8 +102,8 @@ const expertiseData = {
             image: "images/cugat.png",
             title: "RTVE Xavier Cugat",
             link: "tve.es/webdocs/xavier-cugat/#/",
-            description: "Web documental interactivo centrado en la vida del compositor Xavier Cugat realizado para los labs de RTVE.",
-            techs: [{ tech: "angularJS", complexity: "60"}, { tech: "greenshock", complexity: "80"}],
+            description: "Documental interactivo centrado en la vida del compositor Xavier Cugat realizado para los labs de RTVE.",
+            techs: [{ tech: "angularjs", complexity: "60"}, { tech: "greenshock", complexity: "80"}],
             areas: ["front"],
             year: "2017"
         }
@@ -119,5 +119,17 @@ const expertiseData = {
             }, []);
             return techlist.includes(techName);
         });
+    },
+    giveTechExperience: function(techName) {
+        const listOfProjects = this.findProjectsByTech(techName);
+        const currentYear = new Date().getFullYear();
+        const numofYearsWorkingWith = Math.min(...listOfProjects.reduce((acc, project) => { 
+            acc.push(parseInt(project.year));
+            return acc;
+        }, []));
+        return {
+            numOfProjects: listOfProjects.length,
+            years: currentYear - numofYearsWorkingWith
+        }
     }
 }
