@@ -111,7 +111,7 @@ function newMessage() {
 
 function getAfirmativeResponse(lastTech) {
 	return {
-		experiencia: `Estoy trabajando en la mejor forma de contarte los proyectos en los que Sergio ha trabajado relacionados con ${lastTech}. De momento, te puedo recomendar que pinches <a href="#portfolio">aqui</a> para navegar a la sección de proyectos.`,
+		experiencia: `Estoy trabajando en la mejor forma de contarte los proyectos en los que Sergio ha trabajado relacionados con ${lastTech}. De momento, te puedo recomendar que pinches <a href="#portfolio"><b>aquí</b></a> para navegar a la sección de proyectos.`,
 		saludo: '¿Que quieres preguntar?',
 		none: '¿si que?'
 	}[conversationStatus];
@@ -144,7 +144,7 @@ function languageProcessing(textToProcess){
 		const responseOptions = {
 			saludo: getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?",
 			experiencia: `Sergio ha trabajado en ${experiencia?.numOfProjects} proyectos de ${tecnologiaConsultada} en los últimos ${experiencia?.years} años. ¿Quieres saber cuales son esos proyectos?.`,
-			proyectos: `Estoy trabajando en la mejor forma de contarte los proyectos en los que Sergio ha trabajado relacionados con ${tecnologiaConsultada}. De momento, te puedo recomendar que pinches <a href="#portfolio"><b>aqui</b></a> para navegar a la sección de proyectos.`,
+			proyectos: `Estoy trabajando en la mejor forma de contarte los proyectos en los que Sergio ha trabajado relacionados con ${tecnologiaConsultada}. De momento, te puedo recomendar que pinches <a href="#portfolio"><b>aquí</b></a> para navegar a la sección de proyectos.`,
 			opciones: "Puedes preguntarme por la experiencia que tiene Sergio en una tecnologia concreto o por los proyectos en los que ha trabajado usando esta misma, y yo te respondere como buenamente pueda :-).",
 			despedida: "¿nos vemos pronto?",
 			afirmacion: getAfirmativeResponse(tecnologiaConsultada),
