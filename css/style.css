@@ -246,8 +246,9 @@ a{
 .grid-item {
 	display: inline-block;
 	overflow: hidden;
-  margin: 1rem;
-  position: relative;
+	width: 100%;
+	margin: 1rem;
+	position: relative;
 	-webkit-box-shadow: 10px 10px 19px -1px rgba(0,0,0,0.44);
 	-moz-box-shadow: 10px 10px 19px -1px rgba(0,0,0,0.44);
 	box-shadow: 10px 10px 19px -1px rgba(0,0,0,0.44);

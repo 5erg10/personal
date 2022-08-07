@@ -106,6 +106,14 @@ export default {
             techs: [{ tech: "angularjs", complexity: "60"}, { tech: "greenshock", complexity: "80"}],
             areas: ["front"],
             year: "2017"
+        },{
+            image: "images/labsweb.png",
+            title: "Labs Web Dashboard",
+            link: "https://5erg10.github.io/labs-web/#/",
+            description: "plataforma desarrollada para que cualquier empleado puediese consultar las tecnologías sobre las que se ha investigado en el departamento de innovación y tener una aproximación de su valía.",
+            techs: [{ tech: "vuejs", complexity: "80"}],
+            areas: ["front"],
+            year: "2019"
         }
     ],
     getProjects: function() {
