@@ -101,7 +101,7 @@ export default {
         },{
             image: "images/cugat.png",
             title: "RTVE Xavier Cugat",
-            link: "tve.es/webdocs/xavier-cugat/#/",
+            link: "https://lab.rtve.es/webdocs/xavier-cugat/#/",
             description: "Documental interactivo centrado en la vida del compositor Xavier Cugat realizado para los labs de RTVE.",
             techs: [{ tech: "angularjs", complexity: "60"}, { tech: "greenshock", complexity: "80"}],
             areas: ["front"],
