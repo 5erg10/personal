@@ -30,7 +30,7 @@ export default {
             image: "images/geo.png",
             title: "GeoJson Map",
             link: "https://5erg10.github.io/threejs-geoJson",
-            description: "Mapa generado automaticamente en 3D a partir de datos extraidos en formato GeoJson.",
+            description: "Mapa generado automaticamente en 3D a partir de datos extraidos en formato GeoJsonque que reflejan informacion geografica del nivel de ingresos y edad media, exportaciones, etc.",
             techs: [{ tech: "threejs", complexity: "80"}],
             areas: ["front", "data-visualization", "3D"],
             year: "2017"
@@ -46,7 +46,7 @@ export default {
             image: "images/sentTree.png",
             title: "Sent Tree",
             link: "https://5erg10.github.io/sentTree/",
-            description: "Proyecto basado en una escena generada en <b>WebGl</b> que mediante <b>NLP</b> analiza los tweets del uruario para determinar el nivel de felicidad general y modificar la escena en cunsecuencia a la vez que extrae palabras clave para seleccionar una cancion en cuya letra esten contenidas estas palabras clave.",
+            description: "Escena generada en <b>WebGl</b> que mediante <b>NLP</b> analiza los tweets del uruario y modifica la escena según 4 niveles de felicidad que reflejen sus tweets.",
             techs: [{ tech: "threejs", complexity: "70"}],
             areas: ["front", "ia"],
             year: "2014"
@@ -94,7 +94,7 @@ export default {
             image: "images/nextHotel.png",
             title: "Hub Hotel",
             link: "https://5erg10.github.io/hubHotel/",
-            description: "Prototipo que consiste en un entorno en 3d creado con ThreeJS que reproduce diferentes sedes del grupo. El usuario puede recorrerlas y, usando SocketIo, puede ver en tiempo real a otros usuarios que esten en esa misma sede y chatear con ellos.",
+            description: "Prototipo que consiste en un entorno en 3d creado con ThreeJS que reproduce diferentes sedes del grupo. El usuario puede recorerlas y, usando SocketIo, puede ver en tiempo real a otros usuarios que esten en esa misma sede y chatear con ellos.",
             techs: [{ tech: "threejs", complexity: "90"},{ tech: "socketio", complexity: "90"},{ tech: "mongodb", complexity: "70"},{ tech: "express", complexity: "70"},{ tech: "nodejs", complexity: "70"}],
             areas: ["front", "3d"],
             year: "2019"
