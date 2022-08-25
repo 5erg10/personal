@@ -29,10 +29,17 @@ $( document ).ready(function() {
 // -----  CONTACT FORM -----
 
 function showEmailConfirmLabel() {
-	$("#emailConfirmButton").addClass('show-confirm-label');
+	$("#emailConfirmButton").addClass('show-label');
 	setTimeout(() => {
-		$("#emailConfirmButton").removeClass('show-confirm-label');
-	}, 4000);
+		$("#emailConfirmButton").removeClass('show-label');
+	}, 10000);
+};
+
+function showEmailErrorLabel() {
+	$("#emailErrorButton").addClass('show-label');
+	setTimeout(() => {
+		$("#emailErrorButton").removeClass('show-label');
+	}, 10000);
 };
 
 function showFormLoadingCover() {
@@ -66,7 +73,8 @@ function sendEmail(userData) {
 		showEmailConfirmLabel();
 		hideFormLoadingCover();
 	}, function(error) {
-		console.log('FAILED...', error);
+		showEmailErrorLabel();
+		hideFormLoadingCover();
 	});
 };
 

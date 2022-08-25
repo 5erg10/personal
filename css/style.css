@@ -619,7 +619,7 @@ input:required:invalid {
   opacity: 0;
 }
 
-.confirm-label {
+.confirm-label, .error-label {
   font-size: 30px;
   color: rgb(75, 197, 102);
   font-style: italic;
@@ -628,7 +628,15 @@ input:required:invalid {
   transition: opacity 0.3s ease-in-out;
 }
 
-.show-confirm-label {
+.confirm-label {
+  color: rgb(75, 197, 102);
+}
+
+.error-label {
+  color: rgb(197, 75, 75);
+}
+
+.show-label {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
