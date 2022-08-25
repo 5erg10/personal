@@ -31,6 +31,24 @@ p, textarea, input, ul, li {
   padding: 0px;
 }
 
+ol,ul {
+	list-style:none;
+}
+
+caption,th {
+	text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+
+a{
+	text-decoration: none;
+	color: var(--main-yelow-color);
+}
+
 ::-webkit-scrollbar {
   width: 9px;
   height: 9px;
@@ -65,24 +83,6 @@ p, textarea, input, ul, li {
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
-}
-
-ol,ul {
-	list-style:none;
-}
-
-caption,th {
-	text-align:left;
-}
-
-h1,h2,h3,h4,h5,h6 {
-	font-size:100%;
-	font-weight:normal;
-}
-
-a{
-	text-decoration: none;
-	color: var(--main-yelow-color);
 }
 
 /* ------- Nav menu -----*/
@@ -714,6 +714,10 @@ input:required:invalid {
   overflow-x: hidden;
 }
 
+.messages > ul {
+  padding: 0rem 1rem;
+}
+
 .replies, .sent {
   display: flex;
   align-items: flex-start;
@@ -830,6 +834,10 @@ input:required:invalid {
 
   .messages {
     height: calc(100% - 130px);
+  }
+
+  .messages > ul {
+    padding: 0rem;
   }
 
   .replies p, .sent p {
