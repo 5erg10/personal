@@ -741,7 +741,7 @@ input:required:invalid {
 .replies p, .sent p {
   font-size: 1rem;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.1rem;
   width: 100%;
 }
 
