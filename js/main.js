@@ -157,9 +157,9 @@ function languageProcessing(textToProcess){
 	});
 }
 
-$('.submit').click(function() {
-  newMessage();
-});
+$("#chatButton").on("click", function(e){
+	newMessage()
+})
 
 $(window).on('keydown', function(e) {
   if (e.which == 13) {

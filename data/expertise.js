@@ -1,7 +1,8 @@
 //,odule "expertise-module"
 
 export default {
-    projectsList: [
+    projectsList:
+    [
         {
             image: "images/lince.jpg",
             title: "Lince Prototipo",
