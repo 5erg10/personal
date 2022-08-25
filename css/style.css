@@ -9,7 +9,7 @@ body {
   --main-yelow-color: #ffe26d;
   --main-black-color: #141414;
   --main-white-color: #ffffff;
-  --main-white-transparent-color: #ffffff60;
+  --main-white-transparent-color: #ffffff40;
   --scroolbar-light: #d3b953;
   --scrollbar-dark: #bd9e24;
 	width: 100%;
@@ -82,7 +82,7 @@ h1,h2,h3,h4,h5,h6 {
 
 a{
 	text-decoration: none;
-	color: var(--main-black-color);
+	color: var(--main-yelow-color);
 }
 
 /* ------- Nav menu -----*/
@@ -189,7 +189,7 @@ a{
 
 .panel:target{
 	top: 0%;
-	background-color: var(--main-yelow-color);
+	background-color: var(--main-black-color);
 }
 
 .backImage{
@@ -708,7 +708,7 @@ input:required:invalid {
 }
 
 .messages {
-  border-top: solid 2px var(--main-black-color);
+  border-top: solid 2px var(--main-yelow-color);
   height: calc(100% - 150px);
   overflow-y: auto;
   overflow-x: hidden;
@@ -769,7 +769,7 @@ input:required:invalid {
   height: 100%;
   width: 100%;
   padding: 11px 32px 10px 8px;
-  color: var(--main-black-color);
+  color: var(--main-white-color);
   text-align: left;
   background-color: var(--main-white-transparent-color);
   font-size: 1rem;
@@ -781,8 +781,8 @@ input:required:invalid {
   width: 45px;
   font-size: 18px;
   cursor: pointer;
-  background: var(--main-black-color);
-  color: var(--main-white-color);
+  background: var(--main-yelow-color);
+  color: var(--main-black-color);
 }
 
 .message-input input:focus {
