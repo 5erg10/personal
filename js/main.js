@@ -21,9 +21,9 @@ $( document ).ready(function() {
 				<div class="gridElementOver">
 					<div class="glridElementOverText">${project.title}</div>
 					<div class="glridElementOverTextDesc">${project.description}</div>
-					<div class="gridLinks">
-						<a href="${project.link}" target="_blanck">·Prototipo</a>
-						<a id="${project.id}" onClick="openMoreInfo('${project.id}')">+info</a>
+					<div class="gridLinks">` + 
+						( project.link ?  `<a href="${project.link}" target="_blanck">·Prototipo</a>` : '' ) + 
+						`<a id="${project.id}" onClick="openMoreInfo('${project.id}')">+info</a>
 					</div>
 				</div>
 			</div>
@@ -42,12 +42,17 @@ function getOffset( element ) {
     return { top: yposition, left: xposition };
 }
 
-function openMoreInfo( project ) {
-	moreInfoInitialPosition = getOffset( document.getElementById(project) );
+function openMoreInfo( projectId ) {
+	moreInfoInitialPosition = getOffset( document.getElementById(projectId) );
+	const projectData = expertise.getProjectById(projectId);
 	$('body').append(`
 		<div style="top: ${moreInfoInitialPosition.top}px; left: ${moreInfoInitialPosition.left}px;" class="moreInfoBox">
 			<div class="moreInfoFile">
-				<div class="moreInfoCloseButton" onClick="closeMoreInfo()">X</div>
+				<div class="moreInfoCloseButton"><a onClick="closeMoreInfo()">X</a></div>
+				<div class="moreInfotitleBox">
+					<div class="moreInfotitle">${projectData.title}</div>
+				</div>
+				<div class="moreInfoResume">${projectData.resume}</div>
 			</div>
 		</div>
 	`);
