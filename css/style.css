@@ -26,6 +26,16 @@ body {
 	padding:0;
 }
 
+::-moz-selection {
+  color: var(--main-black-color);
+  background: var(--main-yelow-color);
+}
+
+::selection {
+  color: var(--main-black-color);
+  background: var(--main-yelow-color);
+}
+
 p, textarea, input, ul, li {
   margin: 0px;
   padding: 0px;
@@ -115,6 +125,10 @@ a{
   margin: 1rem;
   text-align: center;
   line-height: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
 }
 
 #navigation > a > span{
@@ -829,7 +843,7 @@ input:required:invalid {
   width: 1%;
   height: 1%;
   z-index: 999;
-  background: var(--main-white-transparent-color);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -858,11 +872,15 @@ input:required:invalid {
 
 .moreInfoCloseButton {
   color: var(--main-yelow-color);
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: right;
   cursor: pointer;
   padding-right: 1rem;
   float: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
 }
 
 /*-------- DEVICE STYLE ------------*/
@@ -920,8 +938,12 @@ input:required:invalid {
     padding: 8%;
   }
 
+  .grid-column {
+    width: 300px;
+  }
+
   .grid-item {
-    height: 300px;
+    height: 350px;
   }
   
   .gridElementOver{

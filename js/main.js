@@ -43,9 +43,7 @@ function getOffset( element ) {
 }
 
 function openMoreInfo( project ) {
-
 	moreInfoInitialPosition = getOffset( document.getElementById(project) );
-
 	$('body').append(`
 		<div style="top: ${moreInfoInitialPosition.top}px; left: ${moreInfoInitialPosition.left}px;" class="moreInfoBox">
 			<div class="moreInfoFile">
@@ -53,20 +51,16 @@ function openMoreInfo( project ) {
 			</div>
 		</div>
 	`);
-
 	setTimeout(() => {
 		$('.moreInfoBox').addClass('moreInfoBoxExpand');
 	}, 50)
 }
 
 function closeMoreInfo() {
-
 	$('.moreInfoBox').removeClass('moreInfoBoxExpand');
-
 	setTimeout(() => {
 		$('.moreInfoBox').remove();
 	}, 50);
-
 	moreInfoInitialPosition = { left: 0, top: 0 };
 }
 

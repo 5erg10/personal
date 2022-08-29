@@ -6,7 +6,7 @@ const expertise =  {
             id: "lince",
             title: "Lince Prototipo",
             link: "https://5erg10.github.io/lince",
-            description: "Prototipo de visualización de datos en el que, obteniendo datos de diferentes fuentes (configurables), se puede obtener una panoramica del estado actual de las tecnologias de desarrollo de software.",
+            description: "Obtiene los datos de diferentes fuentes (configurables) y muestra una panoramica del estado actual de las tecnologias más relevantes.",
             techs: [{ tech: "angularjs", complexity: "60"}],
             areas: ["front", "data-visualization"],
             year: "2014"
@@ -33,7 +33,7 @@ const expertise =  {
             id: "geo",
             title: "GeoJson Map",
             link: "https://5erg10.github.io/threejs-geoJson",
-            description: "Mapa generado automaticamente en 3D a partir de datos extraidos en formato GeoJsonque que reflejan informacion geografica del nivel de ingresos y edad media, exportaciones, etc.",
+            description: "Mapa generado automaticamente en 3D a partir ficheros GeoJsonque que reflejan informacion geografica del nivel de ingresos y edad media, exportaciones, etc.",
             techs: [{ tech: "threejs", complexity: "80"}],
             areas: ["front", "data-visualization", "3D"],
             year: "2017"
@@ -42,7 +42,7 @@ const expertise =  {
             id: "vrlabs",
             title: "VR Office",
             link: "https://5erg10.github.io/vrOffice",
-            description: "Prototipo de oficina virtual e interactiva en entorno WebVR con ThreeJS (Abre la WebApp desde un dispositivo movil para disfrutar de la experiencia inmersiva ;-) ).",
+            description: "Oficina virtual e interactiva en entorno WebVR con ThreeJS (Abre la WebApp desde un dispositivo movil para disfrutar de la experiencia inmersiva ;-) ).",
             techs: [{ tech: "threejs", complexity: "80"}],
             areas: ["front", "vr"],
             year: "2017"
@@ -123,7 +123,7 @@ const expertise =  {
             id: "labsweb",
             title: "Labs Web Dashboard",
             link: "https://5erg10.github.io/labs-web/#/",
-            description: "plataforma desarrollada para que cualquier empleado puediese consultar las tecnologías sobre las que se ha investigado en el departamento de innovación y tener una aproximación de su valía.",
+            description: "plataforma para consultar las tecnologías sobre las que se ha investigado en el departamento de innovación y tener una aproximación de su valía.",
             techs: [{ tech: "vuejs", complexity: "80"}],
             areas: ["front"],
             year: "2019"
