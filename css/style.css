@@ -233,7 +233,6 @@ a{
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -904,6 +903,7 @@ input:required:invalid {
 }
 
 .moreInfoResume {
+  box-sizing: border-box;
   width: 50%;
   padding: 2rem;
 }
@@ -962,6 +962,10 @@ input:required:invalid {
   #contact-form {
     padding: 8%;
   }
+  .grid {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   .grid-column {
     width: 300px;
@@ -969,6 +973,7 @@ input:required:invalid {
 
   .grid-item {
     height: 350px;
+    margin: 0.5rem 0rem;
   }
   
   .gridElementOver{
@@ -990,5 +995,29 @@ input:required:invalid {
   
   .grid-item:hover .resizeImage {
     transform: rotate(0deg) scale(1.03);
+  }
+
+  .moreInfoCloseButton {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .moreInfoCloseButton > a {
+    padding: 0.5rem;
+  }
+
+  .moreInfotitleBox {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+  }
+
+  .moreInfotitle {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .moreInfoResume {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 1rem;
   }
 }
