@@ -22,7 +22,7 @@ $( document ).ready(function() {
 					<div class="glridElementOverText">${project.title}</div>
 					<div class="glridElementOverTextDesc">${project.description}</div>
 					<div class="gridLinks">` + 
-						( project.link ?  `<a href="${project.link}" target="_blanck">·Prototipo</a>` : '' ) + 
+						( project.link ? `<a href="${project.link}" target="_blanck">·Prototipo</a>` : '' ) + 
 						`<a id="${project.id}" onClick="openMoreInfo('${project.id}')">+info</a>
 					</div>
 				</div>
@@ -45,17 +45,36 @@ function getOffset( element ) {
 function openMoreInfo( projectId ) {
 	moreInfoInitialPosition = getOffset( document.getElementById(projectId) );
 	const projectData = expertise.getProjectById(projectId);
+	const techsListLength = projectData.techs?.length - 1;
 	$('body').append(`
 		<div style="top: ${moreInfoInitialPosition.top}px; left: ${moreInfoInitialPosition.left}px;" class="moreInfoBox">
 			<div class="moreInfoFile">
-				<div class="moreInfoCloseButton"><a onClick="closeMoreInfo()">X</a></div>
+				<div class="moreInfoHeader">
+					<div class="techsListBox">
+						<div>Techs: </div>
+						<div class="techLists"></div>
+					</div>
+					<a onClick="closeMoreInfo()">X</a>
+				</div>
 				<div class="moreInfotitleBox">
 					<div class="moreInfotitle">${projectData.title}</div>
 				</div>
-				<div class="moreInfoResume">${projectData.resume}</div>
+				<div class="moreInfoContent">
+					<div class="moreInfoContentResume">${projectData.resume}</div>
+					<div class="moreInfoContentImages"></div>
+				</div>
 			</div>
 		</div>
 	`);
+
+	projectData.techs?.map((tech, i) => {
+		$('.techLists').append(`<div class="techListElement">${tech.tech}${i < techsListLength ? ' ·' : ''}</div>`)
+	});
+
+	projectData.media?.images?.map(image => {
+		$('.moreInfoContentImages').append(`<img src="images/projects/${image}"/>`)
+	});
+
 	setTimeout(() => {
 		$('.moreInfoBox').addClass('moreInfoBoxExpand');
 	}, 50)

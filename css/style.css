@@ -253,6 +253,10 @@ a{
 	box-shadow: 10px 10px 19px -1px rgba(0,0,0,0.44);
 }
 
+.grid-item > img {
+  width: 100%;
+}
+
 .resizeImage {
 	transform: rotate(0deg) scale(1.03);
 }
@@ -871,24 +875,43 @@ input:required:invalid {
   box-sizing: border-box;
 }
 
-.moreInfoCloseButton {
+.moreInfoHeader {
   color: var(--main-yelow-color);
   font-size: 2rem;
   width: 100%;
   text-align: right;
-  padding-top: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; 
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.moreInfoCloseButton > a {
+.moreInfoHeader > a {
   cursor: pointer;
   border-bottom: solid 2px var(--main-yelow-color);
   border-left: solid 2px var(--main-yelow-color);
   padding: 1rem;
   box-sizing: border-box;
+}
+
+.techsListBox {
+  font-size: 1rem;
+  padding-left: 2rem;
+  display: flex;
+}
+
+.techLists {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.techListElement {
+  color: var(--main-white-color);
+  padding-left: 0.5rem;
 }
 
 .moreInfotitleBox {
@@ -902,10 +925,32 @@ input:required:invalid {
   line-height: 4rem;
 }
 
-.moreInfoResume {
+.moreInfoContent {
   box-sizing: border-box;
-  width: 50%;
   padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-gap: 2rem;
+  height: 85%;
+}
+
+.moreInfoContentResume {
+
+}
+
+.moreInfoContentImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.moreInfoContentImages > img {
+  width: 300px;
+  height: 200px;
+  margin-top: 1rem;
 }
 
 /*-------- DEVICE STYLE ------------*/
@@ -997,13 +1042,19 @@ input:required:invalid {
     transform: rotate(0deg) scale(1.03);
   }
 
-  .moreInfoCloseButton {
+  .moreInfoHeader {
     font-size: 1rem;
-    padding-top: 0.5rem;
   }
 
-  .moreInfoCloseButton > a {
+  .moreInfoHeader > a {
     padding: 0.5rem;
+  }
+
+  .techsListBox {
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    max-width: 90%;
+    padding-top: 0.5rem;
   }
 
   .moreInfotitleBox {
@@ -1015,9 +1066,13 @@ input:required:invalid {
     line-height: 2rem;
   }
 
-  .moreInfoResume {
+  .moreInfoContent {
+    grid-template-columns: 100%;
     font-size: 0.8rem;
-    width: 100%;
     padding: 1rem;
+  }
+
+  .moreInfoResume {
+    width: 100%;
   }
 }
