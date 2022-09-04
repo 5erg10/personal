@@ -24,7 +24,7 @@ const expertise =  {
         },{
             image: "images/react.jpg",
             id: "react",
-            title: "React JS Test",
+            title: "React JS",
             link: "https://5erg10.github.io/reactTest",
             description: "prototipo web de prueba desarrollado en <b>ReactJS</b>.",
             resume: "<p>Con proposito de analisis de rendimiento y viabilidad en producción de la tecnología <b>ReactJS</b>, se desarrollo esta plataforma Web que pone a prueba diversos casos de uso.</p>",
@@ -124,7 +124,7 @@ const expertise =  {
         },{
             image: "images/cugat.png",
             id: "cugat",
-            title: "RTVE Xavier Cugat",
+            title: "RTVE Cugat",
             link: "https://lab.rtve.es/webdocs/xavier-cugat/#/",
             description: "Haz un viaje a traves de la vida del compositor Xavier Cugat.",
             resume: "<p>Web Documental interactivo creado en <b>AngularJs</b> y <b>GreenShock</b> para RTVE en el que poder profundizar en la vida y obra del compositor Xavier Cugat.</p>",
@@ -134,7 +134,7 @@ const expertise =  {
         },{
             image: "images/labsweb.png",
             id: "labsweb",
-            title: "Labs Web Dashboard",
+            title: "Labs Web",
             link: "https://5erg10.github.io/labs-web/#/",
             description: "plataforma para consultar las tecnologías sobre las que se ha investigado en el departamento de innovación y tener una aproximación de su valía.",
             resume: "<p>Plataforma ideada para conservar, centralizar y compartir todo el conocimiento generado en el laboratorio de innovación.</p><br><p>Dispone de un interfaz de visualización y un dashboard en el que ir generando las fichas de información, hechos ambos en <b>VueJs</b>.</p><br><p>En el flujo final ideado, un miembro del equipo, al terminar el análisis de una tecnología, recurria al dashboard para volcar la información y conclusiones obtenidas, y esta se veía reflejada automáticamente en el interfaz para que cualquier miembro de la empresa la pudiera consultar.</p>",
@@ -144,7 +144,7 @@ const expertise =  {
         },{
             image: "images/arkit15.png",
             id: "Kia ArKit",
-            title: "Kia ARKit prototipe",
+            title: "Kia ARKit",
             description: "Crea un escenario en tiempo real con realidad aumentada.",
             resume: "<p>Prototipo elaborado en colaboración con Kia para el evento del salón del automovil.</p><br><p>En el Stand del evento se dispondría un dispositivo movil y un Set blanco con un modelo de coche de la marca Kia y a los visitabtes se les ofrecía el dispositivo movil para que pudiesen colocar al rededor del cocche elementos virtuales.</p><br><p>Se podian añadir a la escena elementos decorativos, escritura al aire, elementos ambientales como arboles y vegetación, etc Y podian publicarla para entrar en un concurso en el que se votaba el mejor escenario creado.</p>",
             techs: [{ tech: "ARKit", complexity: "80"}, {tech: "Unity", complexity: "70"}],

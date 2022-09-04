@@ -57,7 +57,7 @@ function openMoreInfo( projectId ) {
 					<a onClick="closeMoreInfo()">X</a>
 				</div>
 				<div class="moreInfotitleBox">
-					<div class="moreInfotitle">${projectData.title}</div>
+					<div class="moreInfotitle">${projectData.title} (${projectData.year})</div>
 				</div>
 				<div class="moreInfoContent">
 					<div class="moreInfoContentResume">${projectData.resume}</div>
