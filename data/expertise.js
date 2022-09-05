@@ -70,6 +70,10 @@ const expertise =  {
             resume: "<p>Con Tatami la idea recrear un entorno de realidad virtual pensado para sustiruir el telefono móvil.</p><br><p>Así, este entorno comenzaba en un escenario central donde tenias acceso a todas tus aplicaciones instaladas, diferentes widgets, etc. Para abrir aplicaciones solo tenias que cogerlas y lanzarlas al suelo, alli donde la espera de la aplicacion contacta con el suelo, aparecía una habitacion que representaba esa App y a la que se podia navegar.</p><br><p>Podias organizar a tu alrededor todas las aplicaciones abiertas en el lugar que quisieses, navegar de unas a otras, cerrarlas, etc.</p>",
             techs: [{ tech: "Unity", complexity: "80"},{ tech: "SocketIO", complexity: "70"}],
             areas: ["front", "vr"],
+            media: {
+                videos: ['pF3h_gSsRic'],
+                images: ['tatami_snapshot_1.png', 'tatami_snapshot_2.png', 'tatami_snapshot_3.png']
+            },
             year: "2017"
         },{
             image: "images/arkit.jpg",
