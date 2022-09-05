@@ -61,6 +61,7 @@ function openMoreInfo( projectId ) {
 				</div>
 				<div class="moreInfoContent">
 					<div class="moreInfoContentResume">${projectData.resume}</div>
+					<div class="moreInfoContentVideo"></div>
 					<div class="moreInfoContentImages"></div>
 				</div>
 			</div>
@@ -72,7 +73,11 @@ function openMoreInfo( projectId ) {
 	});
 
 	projectData.media?.images?.map(image => {
-		$('.moreInfoContentImages').append(`<img src="images/projects/${image}"/>`)
+		$('.moreInfoContentImages').append(`<img alt="${image}" src="images/projects/${image}"/>`)
+	});
+
+	projectData.media?.videos?.map(videoId => {
+		$('.moreInfoContentVideo').append(`<iframe allowfullscreen class="moreInfoVideo" src="https://www.youtube.com/embed/${videoId}"></iframe>`)
 	});
 
 	setTimeout(() => {
