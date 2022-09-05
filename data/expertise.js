@@ -167,6 +167,19 @@ const expertise =  {
                 images: ['arce_snapshot_1.png', 'arce_snapshot_2.png', 'arce_snapshot_3.png']
             },
             year: "2020"
+        },{
+            image: "images/roomTeraction.png",
+            id: "RoomTeraction",
+            title: "RoomTeraction",
+            description: "Controla una todo en tu casa con gestos manuales.",
+            resume: "<p>En el departamento de innovación, el equipo de UX e interacciones necesitaban tener un entorno en el que hacer pruebas y ensayos, pero crear un entorno real en el que, por ejemplo, probar nuevos tipos de interacciones del usuario con un cajero automático, era inviable.</p><br><p>Gracias a la realidad virtual, con RoomTeraction podiamos crear cualquier entorno y, dentro de este, programar cualquier tipo de interacción que el equipo de UX quisiese testar.</p><br></p>En este caso concreto, el experimento consistia en recrear una casa en la que, mediante gestos manuales, se pudiesen controlar diferentes dispositivos. El sistema detecta hacia que dispositivo estas mirando y, en funcion de esto, cada gesto tiene una funcionalidad. De esta forma, si subes y bajas la mano mientras miras a la lampara regulas la intentsidad de la luz, pero si haces el mismo gesto mirando a la TV regulas el volumen del sonido.</p><br><p>Todos estos experimentos se configuraban y se ponian en marcha mediante una aplicación desarrollada para teléfonos móviles y tablet que lueg recogíalos datos de interacción del tester para obtener métricas y conclusiones.</p>",
+            techs: [{ tech: "ARCore", complexity: "80"}, {tech: "Unity", complexity: "70"}],
+            areas: ["ar"],
+            media: {
+                videos: ['nzLfmFkn9Kw'],
+                images: ['roomt_snapshot_1.png', 'roomt_snapshot_2.png', 'roomt_snapshot_3.png']
+            },
+            year: "2020"
         }
     ],
     getProjectById: function(id) {
