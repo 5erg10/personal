@@ -7,7 +7,7 @@ const expertise =  {
             title: "Lince Prototipo",
             link: "https://5erg10.github.io/lince",
             description: "Obtiene los datos de diferentes fuentes (configurables) y muestra una panoramica del estado actual de las tecnologias más relevantes.",
-            resume: "<p>En este prototipo se desarrollo un Dashboard en el que reflejar el estado actual y las tendencias en cuando a tecnologias de desarrollo de software.</p><br><p>Se obtenian datos de varias fuentes como stackOverflow o gisthub para representar el crecimiento y evolución de tecnologias de desarrollo.</p><br><p> El objetivo final era crear una herramienta a la que cualquier desarrollador de la empresa pudiese recurrir para valorar qué tecnologias de desarrollo usar en los nuevo proyectos, cuáles estaban creciendo más, cuáles tenian mas apoyo de la comunidad, etc..</p>",
+            resume: "<p>Dashboard hecho con <b>AngularJS</b> y <b>D3JS</b> que refleja el estado actual y las tendencias en cuando a tecnologias de desarrollo de software.</p><br><p>Se obtienen datos de varias fuentes como stackOverflow o github para representar el crecimiento y evolución de tecnologias de desarrollo en diferentes áreas.</p><br><p> El objetivo final era crear una herramienta a la que cualquier desarrollador de la empresa pudiese recurrir para valorar qué tecnologias de desarrollo usar en los nuevo proyectos, cuáles estaban creciendo más, cuáles tenian mas apoyo de la comunidad, etc..</p>",
             techs: [{ tech: "AngularJS", complexity: "60"}],
             areas: ["front", "data-visualization"],
             year: "2014"
@@ -17,7 +17,7 @@ const expertise =  {
             title: "Clever Landing",
             link: "https://5erg10.github.io/cleverLanding",
             description: "Landing de la plataforma de agentes inteligentes <b>CLEVER</b>",
-            resume: "<p>Landing animada en la que se explica el funcionamiento de los agentes inteligentes BIKA.</p><br><p>Con animaciones creadas gracias a la librería <b>GreenShock</b>, se creo esta landing a modo de documental interactivo.</p>",
+            resume: "<p>Landing animada interactiva creada cpn <b>GreenShock</b> en la que se explica el funcionamiento de los agentes inteligentes BIKA, que buscaba organizar y facilitar elacceso al conocimiento generado en la empresa gracias a IA.</p>",
             techs: [{ tech: "AngularJS", complexity: "70"}, { tech: "GreenShock", complexity: "60"}],
             areas: ["front"],
             year: "2015"
@@ -47,7 +47,7 @@ const expertise =  {
             title: "VR Office",
             link: "https://5erg10.github.io/vrOffice",
             description: "Oficina virtual e interactiva en entorno <b>WebVR</b> con <b>ThreeJS</b> (Abre la WebApp desde un dispositivo movil para disfrutar de la experiencia inmersiva ;-)).",
-            resume: "<p>Recreacion de una oficina en un entorno 3D inmersivo.</p><br><p>El objetivo con este prototipo era probar diferentes formas interaccion que fuesen comodas e intuitivas poara un usuario en un entorno de Realidad virtual asi como probar la viabilidad de usar este tipo de entornos para el consumo de información.</p>",
+            resume: "<p>Recreacion de una oficina en un entorno 3D inmersivo.</p><br><p>El objetivo con este prototipo era probar diferentes formas interaccion que fuesen cómodas e intuitivas para un usuario en un entorno de Realidad virtual, asi como probar la viabilidad de usar este tipo de entornos para el consumo de información.</p>",
             techs: [{ tech: "ThreeJS", complexity: "80"}],
             areas: ["front", "vr"],
             year: "2017"
@@ -67,7 +67,7 @@ const expertise =  {
             title: "TatamiVR",
             link: "https://5erg10.github.io/tatamiVR/",
             description: "HomePage y documentacion Web sobre un proyecto de realidad virtual desarrollado para la plataforma VIVE en Unity.",
-            resume: "<p>Con Tatami la idea recrear un entorno de realidad virtual pensado para sustiruir el telefono móvil.</p><br><p>Así, este entorno comenzaba en un escenario central donde tenias acceso a todas tus aplicaciones instaladas, diferentes widgets, etc. Para abrir aplicaciones solo tenias que cogerlas y lanzarlas al suelo, alli donde la espera de la aplicacion contacta con el suelo, aparecía una habitacion que representaba esa App y a la que se podia navegar.</p><br><p>Podias organizar a tu alrededor todas las aplicaciones abiertas en el lugar que quisieses, navegar de unas a otras, cerrarlas, etc.</p>",
+            resume: "<p>Con Tatami nos planteamos el reto de trasladar el uso cotidiano que se hace de un dispositivo móvil a un entorno de realidad virtual.</p><br><p>Creamos un entorno donde tienes a tu alrededor todas las aplicaciones y widgets instalados y para abrirlas solo tienes que coger el icono de la aplicación que desees y lanzarlo al suelo. Alli donde ese icono toque el suelo, se abre una habitacion que representa esa app.</p><br><p>De esta forma, puedes abrir, organizar, cerrar y navegar por cualquier de estas aplicaciones de una forma muy similar a como lo harias en tu teñefono móvil.</p>",
             techs: [{ tech: "Unity", complexity: "80"},{ tech: "SocketIO", complexity: "70"}],
             areas: ["front", "vr"],
             media: {
@@ -81,7 +81,7 @@ const expertise =  {
             title: "ArKit Tips",
             link: "https://5erg10.github.io/ArKitDocu/",
             description: "Diferentes Tips para trabajar con ARKit de Apple.",
-            resume: "<p>Web documental en la que guardabamos para compartir diferentes Tips para trabajar con el SDK de realidad aumentada de ARKit de Apple extraídos de diferentes proyectos en los que estubimos trabajando con esta tecnología.</p>",
+            resume: "<p>Web documental en la que recopila para compartir diferentes Tips para trabajar con el SDK de realidad aumentada de ARKit de Apple, extraídos de diferentes proyectos en los que estuvimos trabajando.</p>",
             techs: [{ tech: "ARKit", complexity: "60"},{ tech: "SocketIO", complexity: "80"}],
             areas: ["front", "ar"],
             year: "2014"
@@ -91,7 +91,7 @@ const expertise =  {
             title: "Word 2 Vec",
             link: "https://5erg10.github.io/word2Vec/#/scroll",
             description: "Se distributen palabras en un espacio tridimensional en función de su proximidad semántica.",
-            resume: "<p>El objetivo de este prototipo era trabajar con librerias como Word2Vec, que era capaz de extraer la proximidad semántica entre diferentes parabras y agruparlas en grupos semánticos comúnes.</p><br><p>Esta libreria nos devolvia los datos de proximidad como vectores de 3 ejes, por lo que se podía trasladar esa información a un entorno 3D creado con <b>threeJs</b> y crear una nuve tridimensional de palabras.</p>",
+            resume: "<p>El objetivo de este prototipo era trabajar con librerias como Word2Vec, que es capaz de extraer la proximidad semántica entre diferentes parabras y agruparlas en grupos semánticos comúnes.</p><br><p>Esta libreria nos devuelve los datos de proximidad como vectores de 3 ejes, por lo que se podía trasladar esa información a un entorno 3D creado con <b>threeJs</b> y generar una nuve tridimensional de palabras.</p>",
             techs: [{ tech: "ThreeJS", complexity: "80"}],
             areas: ["front", "data-visualization"],
             year: "2016"
@@ -121,7 +121,7 @@ const expertise =  {
             title: "Hub Hotel",
             link: "https://5erg10.github.io/hubHotel/",
             description: "El usuario puede recorer diferentes oficinas y puede ver en tiempo real a otros usuarios y chatear con ellos.",
-            resume: "<p>En la empresa se detecto una problemática, muchos empleados que trabajan en diferentes sedes, en ocasiones tiene que acudir a otras sedes para formaciones ogestiones, y les costaba orientarse o localizar la zona de la oficina a la que debía dirigirse.</p><br><p>Para buscar una solución y recurriendo a <b>ThreeJs</b>, se recrearon en 3D diferentes sedes de la empresa con las zonas de interes más importantes para que el usuario pueda seleccionar un avatar y una de esas sedes, y entrar para poder recorrerla y familiarizarse con todo lo que esa sede le puede ofrecer y donde se localiza cada zona.</p><br><p>Gracias, además, a un modúlo de <b>Socket.io</b> desplegado en Heroku, el usuario puede ver en tiempo real a otroa compañeros que también estén recorriendo esa misma sede y chatear con ellos.</p>",
+            resume: "<p>En la empresa se detecto una problemática. Muchos empleados que trabajan en diferentes sedes en ocasiones tiene que acudir a otras sedes para formaciones o gestiones, y les costaba orientarse o localizar la zona de la oficina a la que debía dirigirse por que nunca habian estado.</p><br><p>NextHub propone una solución y recurriendo a <b>ThreeJs</b>, se recrearon en 3D diferentes sedes de la empresa con las zonas de interes más importantes para que el usuario pueda seleccionar un avatar y una de esas sedes, y entrar para poder recorrerla y familiarizarse con todo lo que esa sede le puede ofrecer y donde se localiza cada zona.</p><br><p>Gracias, además, a un modúlo de <b>Socket.io</b> desplegado en Heroku, el usuario puede ver en tiempo real a otroa compañeros que también estén recorriendo esa misma sede y chatear con ellos.</p>",
             techs: [{ tech: "ThreeJS", complexity: "90"},{ tech: "SocketIO", complexity: "90"},{ tech: "MongoDB", complexity: "70"},{ tech: "Express", complexity: "70"},{ tech: "NodeJS", complexity: "70"}],
             areas: ["front", "3d"],
             year: "2019"
@@ -131,7 +131,7 @@ const expertise =  {
             title: "RTVE Cugat",
             link: "https://lab.rtve.es/webdocs/xavier-cugat/#/",
             description: "Haz un viaje a traves de la vida del compositor Xavier Cugat.",
-            resume: "<p>Web Documental interactivo creado en <b>AngularJs</b> con animaciones gracias a <b>GreenShock</b> para RTVE en el que poder profundizar en la vida y obra del compositor Xavier Cugat.</p>",
+            resume: "<p>Web Documental interactivo creado en <b>AngularJs</b> con <b>GreenShock</b> para RTVE en el que poder profundizar en la vida y obra del compositor Xavier Cugat.</p>",
             techs: [{ tech: "AngularJS", complexity: "60"}, { tech: "GreenShock", complexity: "80"}],
             areas: ["front"],
             year: "2017"
@@ -176,7 +176,7 @@ const expertise =  {
             id: "RoomTeraction",
             title: "RoomTeraction",
             description: "Controla todo en tu casa con gestos manuales.",
-            resume: "<p>En el departamento de innovación, el equipo de UX e interacciones necesitaban tener un entorno en el que hacer pruebas y ensayos, pero crear un entorno real en el que, por ejemplo, probar nuevos tipos de interacciones del usuario con un cajero automático, era inviable.</p><br><p>Gracias a la realidad virtual, con RoomTeraction podiamos crear cualquier entorno y, dentro de este, programar cualquier tipo de interacción que el equipo de UX quisiese testar.</p><br></p>En este caso concreto, el experimento consistia en recrear una casa en la que, mediante gestos manuales, se pudiesen controlar diferentes dispositivos. El sistema detecta hacia que dispositivo estas mirando y, en funcion de esto, cada gesto tiene una funcionalidad. De esta forma, si subes y bajas la mano mientras miras a la lampara regulas la intentsidad de la luz, pero si haces el mismo gesto mirando a la TV regulas el volumen del sonido.</p><br><p>Todos estos experimentos se configuraban y se ponian en marcha mediante una aplicación desarrollada para teléfonos móviles y tablet que tambien recogía datos de interacción del tester para sacar métricas y conclusiones.</p>",
+            resume: "<p>En el departamento de innovación, el equipo de UX e interacciones necesitaban tener un entorno en el que hacer pruebas y ensayos, pero crear un entorno real en el que, por ejemplo, probar nuevos tipos de interacciones del usuario con un cajero automático, era inviable.</p><br><p>Gracias a la realidad virtual, con RoomTeraction podiamos crear cualquier entorno y, dentro de este, programar cualquier tipo de interacción que el equipo de UX quisiese testar.</p><br></p>En este caso concreto, el experimento consistía en recrear una casa en la que, mediante gestos manuales, se pudiesen controlar diferentes dispositivos. El sistema detecta hacia que dispositivo estas mirando y, en funcion de esto, cada gesto tiene una funcionalidad. De esta forma, si subes y bajas la mano mientras miras a la lampara regulas la intentsidad de la luz, pero si haces el mismo gesto mirando a la TV regulas el volumen del sonido.</p><br><p>Todos estos experimentos se configuraban y se ponian en marcha mediante una aplicación desarrollada para teléfonos móviles y tablet que también recogía datos de interacción del tester para sacar métricas y conclusiones.</p>",
             techs: [{ tech: "Oculus", complexity: "80"}, {tech: "Unity", complexity: "70"}],
             areas: ["vr"],
             media: {
