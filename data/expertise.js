@@ -10,6 +10,10 @@ const expertise =  {
             resume: "<p>Dashboard hecho con <b>AngularJS</b> y <b>D3JS</b> que refleja el estado actual y las tendencias en cuando a tecnologias de desarrollo de software.</p><br><p>Se obtienen datos de varias fuentes como stackOverflow o github para representar el crecimiento y evolución de tecnologias de desarrollo en diferentes áreas.</p><br><p> El objetivo final era crear una herramienta a la que cualquier desarrollador de la empresa pudiese recurrir para valorar qué tecnologias de desarrollo usar en los nuevo proyectos, cuáles estaban creciendo más, cuáles tenian mas apoyo de la comunidad, etc..</p>",
             techs: [{ tech: "AngularJS", complexity: "60"}],
             areas: ["front", "data-visualization"],
+            media: {
+                videos: [],
+                images: ['lince_snapshot_1.png', 'lince_snapshot_2.png', 'lince_snapshot_3.png']
+            },
             year: "2014"
         },{
             image: "images/clever.jpg",
@@ -17,9 +21,13 @@ const expertise =  {
             title: "Clever Landing",
             link: "https://5erg10.github.io/cleverLanding",
             description: "Landing de la plataforma de agentes inteligentes <b>CLEVER</b>",
-            resume: "<p>Landing animada interactiva creada cpn <b>GreenShock</b> en la que se explica el funcionamiento de los agentes inteligentes BIKA, que buscaba organizar y facilitar elacceso al conocimiento generado en la empresa gracias a IA.</p>",
+            resume: "<p>Landing animada interactiva creada con <b>GreenShock</b> en la que se explica el funcionamiento de los agentes inteligentes BIKA, que busca organizar y facilitar el acceso al conocimiento generado en la empresa gracias a IA.</p>",
             techs: [{ tech: "AngularJS", complexity: "70"}, { tech: "GreenShock", complexity: "60"}],
             areas: ["front"],
+            media: {
+                videos: [],
+                images: ['clever_snapshot_1.png', 'clever_snapshot_2.png', 'clever_snapshot_3.png']
+            },
             year: "2015"
         },{
             image: "images/react.jpg",
@@ -30,6 +38,10 @@ const expertise =  {
             resume: "<p>Con proposito de analisis de rendimiento y viabilidad en producción de la tecnología <b>ReactJS</b>, se desarrollo esta plataforma Web que pone a prueba diversos casos de uso.</p>",
             techs: [{ tech: "ReactJS", complexity: "70"}],
             areas: ["front"],
+            media: {
+                videos: [],
+                images: ['react_snapshot_1.png', 'react_snapshot_2.png', 'react_snapshot_3.png']
+            },
             year: "2016"
         },{
             image: "images/geo.png",
@@ -40,6 +52,10 @@ const expertise =  {
             resume: "<p>A partir de ficheros GeoJson y diversos datos macroeconomicos extraidos de diferentes bases de datos públicas, se generan de manera automática mapas en 3D gracias a la tecnología <b>ThreeJs</b> que reflejan información geográfica del nivel de ingresos y edad media de poblaciones de diferentes países, datos sobre exportaciones e importaciones, etc.</p><br><p>En este interfaz se puede seleccionar diferentes tipos de mapas y se puede elegir que parámetros visualizar de manera dinámica.</p>",
             techs: [{ tech: "ThreeJS", complexity: "80"}],
             areas: ["front", "data-visualization", "3D"],
+            media: {
+                videos: [],
+                images: ['geo_snapshot_1.png', 'geo_snapshot_2.png', 'geo_snapshot_3.png']
+            },
             year: "2017"
         },{
             image: "images/vrLabs.png",
@@ -50,6 +66,10 @@ const expertise =  {
             resume: "<p>Recreacion de una oficina en un entorno 3D inmersivo.</p><br><p>El objetivo con este prototipo era probar diferentes formas interaccion que fuesen cómodas e intuitivas para un usuario en un entorno de Realidad virtual, asi como probar la viabilidad de usar este tipo de entornos para el consumo de información.</p>",
             techs: [{ tech: "ThreeJS", complexity: "80"}],
             areas: ["front", "vr"],
+            media: {
+                videos: [],
+                images: ['vrlabs_snapshot_1.png', 'vrlabs_snapshot_2.png', 'vrlabs_snapshot_3.png']
+            },
             year: "2017"
         },{
             image: "images/sentTree.png",
@@ -60,6 +80,10 @@ const expertise =  {
             resume: "<p>Escena generada en <b>WebGl</b> que mediante <b>NLP</b> analiza los tweets del usuario y extrae el estado de ánimo general de sus mensajes para reflejarlo en las 4 estaciones del año.</p>",
             techs: [{ tech: "ThreeJS", complexity: "70"}],
             areas: ["front", "ia"],
+            media: {
+                videos: [],
+                images: ['sent_snapshot_1.png', 'sent_snapshot_2.png', 'sent_snapshot_3.png']
+            },
             year: "2014"
         },{
             image: "images/tatami.png",
@@ -94,6 +118,10 @@ const expertise =  {
             resume: "<p>El objetivo de este prototipo era trabajar con librerias como Word2Vec, que es capaz de extraer la proximidad semántica entre diferentes parabras y agruparlas en grupos semánticos comúnes.</p><br><p>Esta libreria nos devuelve los datos de proximidad como vectores de 3 ejes, por lo que se podía trasladar esa información a un entorno 3D creado con <b>threeJs</b> y generar una nuve tridimensional de palabras.</p>",
             techs: [{ tech: "ThreeJS", complexity: "80"}],
             areas: ["front", "data-visualization"],
+            media: {
+                videos: [],
+                images: ['word_snapshot_1.png', 'word_snapshot_2.png', 'word_snapshot_3.png']
+            },
             year: "2016"
         },{
             image: "images/d3Vis.jpg",
@@ -114,6 +142,10 @@ const expertise =  {
             resume: "<p>El objetivo era poder trabajar y testear tecnologías como <b>dialogFlow</b> o <b>fireBase</b>.</p><br><p>Para ello ideé un videojuego de tipo conversacional en el que ir descifrando los diferentes enigmas y avanzar en el juego, al estilo de juegos de los años 80 como el prisionero del hielo.</p>",
             techs: [{ tech: "SocketIO", complexity: "70"},{ tech: "Dialogflow", complexity: "50"},{ tech: "Firebase", complexity: "50"},{ tech: "NodeJS", complexity: "70"}],
             areas: ["front", "ia", "chatbot"],
+            media: {
+                videos: [],
+                images: ['quijote_snapshot_1.png', 'quijote_snapshot_2.png', 'quijote_snapshot_3.png']
+            },
             year: "2019"
         },{
             image: "images/nextHotel.png",
@@ -124,6 +156,10 @@ const expertise =  {
             resume: "<p>En la empresa se detecto una problemática. Muchos empleados que trabajan en diferentes sedes en ocasiones tiene que acudir a otras sedes para formaciones o gestiones, y les costaba orientarse o localizar la zona de la oficina a la que debía dirigirse por que nunca habian estado.</p><br><p>NextHub propone una solución y recurriendo a <b>ThreeJs</b>, se recrearon en 3D diferentes sedes de la empresa con las zonas de interes más importantes para que el usuario pueda seleccionar un avatar y una de esas sedes, y entrar para poder recorrerla y familiarizarse con todo lo que esa sede le puede ofrecer y donde se localiza cada zona.</p><br><p>Gracias, además, a un modúlo de <b>Socket.io</b> desplegado en Heroku, el usuario puede ver en tiempo real a otroa compañeros que también estén recorriendo esa misma sede y chatear con ellos.</p>",
             techs: [{ tech: "ThreeJS", complexity: "90"},{ tech: "SocketIO", complexity: "90"},{ tech: "MongoDB", complexity: "70"},{ tech: "Express", complexity: "70"},{ tech: "NodeJS", complexity: "70"}],
             areas: ["front", "3d"],
+            media: {
+                videos: [],
+                images: ['hub_snapshot_1.png', 'hub_snapshot_2.png', 'hub_snapshot_3.png']
+            },
             year: "2019"
         },{
             image: "images/cugat.png",
@@ -134,6 +170,10 @@ const expertise =  {
             resume: "<p>Web Documental interactivo creado en <b>AngularJs</b> con <b>GreenShock</b> para RTVE en el que poder profundizar en la vida y obra del compositor Xavier Cugat.</p>",
             techs: [{ tech: "AngularJS", complexity: "60"}, { tech: "GreenShock", complexity: "80"}],
             areas: ["front"],
+            media: {
+                videos: [],
+                images: ['cugat_snapshot_1.png', 'cugat_snapshot_2.png', 'cugat_snapshot_3.png']
+            },
             year: "2017"
         },{
             image: "images/labsweb.png",
@@ -144,6 +184,10 @@ const expertise =  {
             resume: "<p>Plataforma ideada para conservar, centralizar y compartir todo el conocimiento generado en el laboratorio de innovación.</p><br><p>Dispone por un lado de un interfaz de visualización y por otro de un dashboard en el que ir generando las información que se mostrará en el primero, hechos ambos en <b>VueJs</b>.</p><br><p>En el flujo final ideado, un miembro del equipo de innnovación, al terminar el análisis de una tecnología, recurria al dashboard para volcar la información y conclusiones obtenidas, y esta se veía reflejada automáticamente en el interfaz para que cualquier miembro de la empresa la pudiera consultar.</p><br><p>Para poder tener acceso al dashboard de gestión de datos en esta demo, se ha añadido un boton 'CREAR' en el insterfaz de visualización que en el entorno real no existe.</p>",
             techs: [{ tech: "Vuejs", complexity: "80"}],
             areas: ["front"],
+            media: {
+                videos: [],
+                images: ['labs_snapshot_1.png', 'labs_snapshot_2.png', 'labs_snapshot_3.png']
+            },
             year: "2019"
         },{
             image: "images/arkit15.png",
