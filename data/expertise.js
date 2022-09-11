@@ -184,6 +184,19 @@ const expertise =  {
                 images: ['roomt_snapshot_1.png', 'roomt_snapshot_2.png', 'roomt_snapshot_3.png']
             },
             year: "2020"
+        },{
+            image: "images/liveShop.png",
+            id: "LiveShop",
+            title: "LiveShop",
+            description: "El usuario obtiene información adicional de sus articulos en tiempo real y, en la tienda, datos de hábitos de consumo.",
+            resume: "<p>Este prototipo, orientado a tiendas de ropa en este caso, constaba de dos partes. Por un lado, tenemos una aplicación android/IOS y por otro un Dashboard Web.</p><br><p>La aplicación móvil ofrece la opción Live, un botón que abre la cámara y, utilizando la propia carteleria de la tienda como marcadores AR, muestra información adicional en realidad aumentada sobre los articulos que nos interesan, como puede ser tallas o colores disponibles.</p><br><p>El Dashboard Web esta destinado para su uso por los empleados de la propia tienda. En este, se muestra en tiempo real la actividad de los usuarios con la aplicación móvil. Así, nos muestra por cada usuario, en que zona de la tienda esta, que articulos ha consultado y que información especifica esta consultando sobre el artículo.</p><br><p>Este sistema ofrece dos ventajas. Por un lado el usuario puede saber al instante si el articulo que le interesa esta dispoble en la talla y color que el necesita. Por el otro, se libera a los empleados de la tienda de ese tipo de consultas y la tienda obtiene informacion sobre habitos de consumo de los usuarios, rutas más frecuentadas dentro de la tienda, productos más consultados, etc.</p>",
+            techs: [{ tech: "Vuforia", complexity: "80"}, {tech: "Unity", complexity: "70"}],
+            areas: ["ar", "front"],
+            media: {
+                videos: ['YMS2XdAFsP0'],
+                images: ['liveshop_snapshot_1.png', 'liveshop_snapshot_2.png', 'liveshop_snapshot_3.png']
+            },
+            year: "2020"
         }
     ],
     getProjectById: function(id) {
