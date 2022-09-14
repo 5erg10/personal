@@ -124,16 +124,6 @@ const expertise =  {
             },
             year: "2016"
         },{
-            image: "images/d3Vis.jpg",
-            id: "d3Vis",
-            title: "D3 Visualization",
-            link: "https://5erg10.github.io/word2Vec/#/about",
-            description: "Diferentes pruebas de visualización de datos realizado en AngularJS con D3JS.",
-            resume: "<p>Diferentes pruebas de visualización de datos realizado en <b>AngularJS</b> con <b>D3JS</b>.</p>",
-            techs: [{ tech: "AngularJS", complexity: "60"}],
-            areas: ["front", "data-visualization"],
-            year: "2015"
-        },{
             image: "images/quijote2077.png",
             id: "quijote2077",
             title: "Quijote 2077",
@@ -157,7 +147,7 @@ const expertise =  {
             techs: [{ tech: "ThreeJS", complexity: "90"},{ tech: "SocketIO", complexity: "90"},{ tech: "MongoDB", complexity: "70"},{ tech: "Express", complexity: "70"},{ tech: "NodeJS", complexity: "70"}],
             areas: ["front", "3d"],
             media: {
-                videos: [],
+                videos: ['IAwm9ZdqDw0'],
                 images: ['hub_snapshot_1.png', 'hub_snapshot_2.png', 'hub_snapshot_3.png']
             },
             year: "2019"
