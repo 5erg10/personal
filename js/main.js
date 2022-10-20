@@ -47,14 +47,14 @@ function openMoreInfo( projectId ) {
 	const projectData = expertise.getProjectById(projectId);
 	const techsListLength = projectData.techs?.length - 1;
 	$('body').append(`
-		<div style="top: ${moreInfoInitialPosition.top}px; left: ${moreInfoInitialPosition.left}px;" class="moreInfoBox">
+		<div id="moreInfoBox" style="top: ${moreInfoInitialPosition.top}px; left: ${moreInfoInitialPosition.left}px;" class="moreInfoBox" onCLick="closeMoreInfo(event)">
 			<div class="moreInfoFile">
 				<div class="moreInfoHeader">
 					<div class="techsListBox">
 						<div>Techs: </div>
 						<div class="techLists"></div>
 					</div>
-					<a onClick="closeMoreInfo()">X</a>
+					<a id="moreInfoBoxCloseButton" onClick="closeMoreInfo(event)">X</a>
 				</div>
 				<div class="moreInfotitleBox">
 					<div class="moreInfotitle">${projectData.title} (${projectData.year})</div>
@@ -85,12 +85,15 @@ function openMoreInfo( projectId ) {
 	}, 50)
 }
 
-function closeMoreInfo() {
-	$('.moreInfoBox').removeClass('moreInfoBoxExpand');
-	setTimeout(() => {
-		$('.moreInfoBox').remove();
-	}, 50);
-	moreInfoInitialPosition = { left: 0, top: 0 };
+function closeMoreInfo(ev) {
+	ev.stopPropagation();
+	if(ev?.target?.id) {
+		$('.moreInfoBox').removeClass('moreInfoBoxExpand');
+		setTimeout(() => {
+			$('.moreInfoBox').remove();
+		}, 50);
+		moreInfoInitialPosition = { left: 0, top: 0 };
+	}
 }
 
 // -----  CONTACT FORM -----

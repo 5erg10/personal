@@ -248,9 +248,6 @@ a{
 	width: 100%;
 	margin: 1rem;
 	position: relative;
-	-webkit-box-shadow: 10px 10px 19px -1px rgba(0,0,0,0.44);
-	-moz-box-shadow: 10px 10px 19px -1px rgba(0,0,0,0.44);
-	box-shadow: 10px 10px 19px -1px rgba(0,0,0,0.44);
 }
 
 .grid-item > img {
@@ -891,8 +888,6 @@ input:required:invalid {
 
 .moreInfoHeader > a {
   cursor: pointer;
-  border-bottom: solid 2px var(--main-yelow-color);
-  border-left: solid 2px var(--main-yelow-color);
   padding: 1rem;
   box-sizing: border-box;
 }
