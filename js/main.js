@@ -13,6 +13,7 @@ let moreInfoInitialPosition = { left: 0, top: 0};
 // -----  EXPERTISE PROYECTS -----
 
 $( document ).ready(function() {
+	christmasMode();
 	const projectsData = expertise.getProjects();
 	projectsData.map( (project, index) => {
 		$(`#column${index%3+1}`).append(`
@@ -83,6 +84,14 @@ function openMoreInfo( projectId ) {
 	setTimeout(() => {
 		$('.moreInfoBox').addClass('moreInfoBoxExpand');
 	}, 50)
+}
+
+function christmasMode() {
+	const d = new Date();
+	const currentDate = { day: d.getDate(), month: d.getMonth() + 1 }
+	if (currentDate.month === 12 && currentDate.day >= 22 || currentDate.month === 1 && currentDate.day <= 6) {
+		$.getScript("https://app.embed.im/snow.js");
+	}
 }
 
 function closeMoreInfo(ev) {
