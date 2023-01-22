@@ -127,7 +127,7 @@ const expertise =  {
             image: "images/quijote2077.png",
             id: "quijote2077",
             title: "Quijote 2077",
-            link: "https://quijote2077.onrender.com/",
+            link: "https://quijote2077.up.railway.app/",
             description: "Aventura gráfica conversacional inspirada en la de los años 80.",
             resume: "<p>El objetivo era poder trabajar y testear tecnologías como <b>dialogFlow</b> o <b>fireBase</b>.</p><br><p>Para ello ideé un videojuego de tipo conversacional en el que ir descifrando los diferentes enigmas y avanzar en el juego, al estilo de juegos de los años 80 como el prisionero del hielo.</p>",
             techs: [{ tech: "SocketIO", complexity: "70"},{ tech: "Dialogflow", complexity: "50"},{ tech: "Firebase", complexity: "50"},{ tech: "NodeJS", complexity: "70"}],
