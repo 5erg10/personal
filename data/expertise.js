@@ -152,6 +152,18 @@ const expertise =  {
             },
             year: "2019"
         },{
+            image: "images/minecraftCover.png",
+            id: "reactMinecraft",
+            title: "React Minecraft",
+            link: "https://5erg10.github.io/react-minecraft/",
+            description: "Minecraft en entorno web",
+            resume: "<p>Recreación del videojuego Minecraft para entornos web usando ThreeJS y ReactJS</p>",
+            techs: [{ tech: "ThreeJS", complexity: "90"},{ tech: "ReactJS", complexity: "90"}],
+            areas: ["front", "3d"],
+            media: {},
+            inProgress: true,
+            year: "2023"
+        },{
             image: "images/cugat.png",
             id: "cugat",
             title: "RTVE Cugat",

@@ -20,6 +20,7 @@ $( document ).ready(function() {
 			<div class="grid-item">
 				<img class="resizeImage" src="${project.image}" alt="${project.title}"/>
 				<div class="gridElementOver">
+					<div class="glridElementWorkInProgressLabel">` + (project.inProgress ? 'Work in progress' : '') + `</div>
 					<div class="glridElementOverText">${project.title}</div>
 					<div class="glridElementOverTextDesc">${project.description}</div>
 					<div class="gridLinks">` + 
