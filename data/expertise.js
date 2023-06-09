@@ -49,7 +49,7 @@ const expertise =  {
             title: "GeoJson Map",
             link: "https://5erg10.github.io/threejs-geoJson",
             description: "Mapa generado automaticamente en 3D a partir ficheros GeoJson.",
-            resume: "<p>A partir de ficheros GeoJson y diversos datos macroeconomicos extraidos de diferentes bases de datos públicas, se generan de manera automática mapas en 3D gracias a la tecnología <b>ThreeJs</b> que reflejan información geográfica del nivel de ingresos y edad media de poblaciones de diferentes países, datos sobre exportaciones e importaciones, etc.</p><br><p>En este interfaz se puede seleccionar diferentes tipos de mapas y se puede elegir que parámetros visualizar de manera dinámica.</p>",
+            resume: "<p>A partir de ficheros GeoJson y diversos datos macroeconomicos extraidos de diferentes bases de datos públicas, se generan de manera automática mapas en 3D gracias con <b>ThreeJs</b> que reflejan información geográfica del nivel de ingresos y edad media de poblaciones de diferentes países, datos sobre exportaciones e importaciones, etc.</p><br><p>En este interfaz se puede seleccionar diferentes tipos de mapas y se puede elegir que parámetros visualizar de manera dinámica.</p>",
             techs: [{ tech: "ThreeJS", complexity: "80"}],
             areas: ["front", "data-visualization", "3D"],
             media: {
@@ -143,7 +143,7 @@ const expertise =  {
             title: "Hub Hotel",
             link: "https://5erg10.github.io/hubHotel/",
             description: "El usuario puede recorer diferentes oficinas y puede ver en tiempo real a otros usuarios y chatear con ellos.",
-            resume: "<p>En la empresa se detecto una problemática. Muchos empleados que trabajan en diferentes sedes en ocasiones tiene que acudir a otras sedes para formaciones o gestiones, y les costaba orientarse o localizar la zona de la oficina a la que debía dirigirse por que nunca habian estado.</p><br><p>NextHub propone una solución y recurriendo a <b>ThreeJs</b>, se recrearon en 3D diferentes sedes de la empresa con las zonas de interes más importantes para que el usuario pueda seleccionar un avatar y una de esas sedes, y entrar para poder recorrerla y familiarizarse con todo lo que esa sede le puede ofrecer y donde se localiza cada zona.</p><br><p>Gracias, además, a un modúlo de <b>Socket.io</b> desplegado en Heroku, el usuario puede ver en tiempo real a otroa compañeros que también estén recorriendo esa misma sede y chatear con ellos.</p>",
+            resume: "<p>En la empresa se detecto una problemática. Muchos empleados que trabajan fuera de la sede en clientes externos nunca han estado en otras sedes o solo un par de veces, por lo que cuando tienen que ir por una formacion o para hacer gestiones, se encuentran perdidos y no saben localizar las zonas que les interesan.</p><br><p><b>HubHotel</b> es un entorno 3d interactivo creado con <b>ThreeJs</b> en el que los empleados pueden seleccionar un avatar y una sede y recorrerla con libertad para localizar los puntos que son de su interes.</p><br><p>A su vez, y gracias a un servidor de <b>WebSocket</b>, se podrá encontrar en tiempo real con otros usuarios conectados que tambien esten recorriendo la sede para poder chatear con ellos.</p>",
             techs: [{ tech: "ThreeJS", complexity: "90"},{ tech: "SocketIO", complexity: "90"},{ tech: "MongoDB", complexity: "70"},{ tech: "Express", complexity: "70"},{ tech: "NodeJS", complexity: "70"}],
             areas: ["front", "3d"],
             media: {
@@ -183,7 +183,7 @@ const expertise =  {
             title: "Labs Web",
             link: "https://5erg10.github.io/labs-web/#/",
             description: "plataforma para consultar las tecnologías sobre las que se ha investigado en el departamento de innovación y tener una aproximación de su valía.",
-            resume: "<p>Plataforma ideada para conservar, centralizar y compartir todo el conocimiento generado en el laboratorio de innovación.</p><br><p>Dispone por un lado de un interfaz de visualización y por otro de un dashboard en el que ir generando las información que se mostrará en el primero, hechos ambos en <b>VueJs</b>.</p><br><p>En el flujo final ideado, un miembro del equipo de innnovación, al terminar el análisis de una tecnología, recurria al dashboard para volcar la información y conclusiones obtenidas, y esta se veía reflejada automáticamente en el interfaz para que cualquier miembro de la empresa la pudiera consultar.</p><br><p>Para poder tener acceso al dashboard de gestión de datos en esta demo, se ha añadido un boton 'CREAR' en el insterfaz de visualización que en el entorno real no existe.</p>",
+            resume: "<p>Plataforma ideada para conservar, centralizar y compartir todo el conocimiento generado en el laboratorio de innovación.</p><br><p>Dispone por un lado de un interfaz de visualización y por otro de un dashboard en el que ir generando la información que se mostrará en el primero, hechos ambos en <b>VueJs</b>.</p><br><p>En el flujo final ideado, un miembro del equipo de innnovación, al terminar el análisis de una tecnología, recurria al dashboard para volcar la información y conclusiones obtenidas, y esta se veía reflejada automáticamente en el interfaz para que cualquier miembro de la empresa la pudiera consultar.</p><br><p>Para poder tener acceso al dashboard de gestión de datos en esta demo, se ha añadido un boton 'CREAR' en el insterfaz de visualización que en el entorno real no existe.</p>",
             techs: [{ tech: "Vuejs", complexity: "80"}],
             areas: ["front"],
             media: {
@@ -196,7 +196,7 @@ const expertise =  {
             id: "Kia ArKit",
             title: "Kia ARKit",
             description: "Crea un escenario en tiempo real con realidad aumentada.",
-            resume: "<p>Prototipo elaborado en colaboración con Kia para el evento del salón del automovil.</p><br><p>En el Stand del evento se dispondría un dispositivo movil y un Set blanco con un modelo de coche de la marca Kia y a los visitabtes se les ofrecía el dispositivo movil para que pudiesen colocar al rededor del cocche elementos virtuales.</p><br><p>Se podian añadir a la escena elementos decorativos, escritura al aire, elementos ambientales como arboles y vegetación, etc Y podian publicarla para entrar en un concurso en el que se votaba el mejor escenario creado.</p>",
+            resume: "<p>Prototipo elaborado en colaboración con Kia para el evento del salón del automovil.</p><br><p>En el Stand del evento se dispondría un dispositivo movil y un Set blanco con un modelo de coche de la marca Kia y a los visitantes se les ofrecía el dispositivo movil para que pudiesen colocar al rededor del cocche elementos virtuales.</p><br><p>Se podian añadir a la escena elementos decorativos, escritura al aire, elementos ambientales como arboles y vegetación, etc Y podian publicarla para entrar en un concurso en el que se votaba el mejor escenario creado.</p>",
             techs: [{ tech: "ARKit", complexity: "80"}, {tech: "Unity", complexity: "70"}],
             areas: ["ar"],
             media: {
