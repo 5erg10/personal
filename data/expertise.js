@@ -1,4 +1,4 @@
-const expertise =  {
+export const expertise = {
     projectsList:
     [
         {
