@@ -17,7 +17,7 @@ $( document ).ready(function() {
 	christmasMode();
 	const projectsData = expertise.getProjects();
 	projectsData.map( (project, index) => {
-		$(`#column${index%3+1}`).append(`
+		$(`#grid`).append(`
 			<div class="grid-item">
 				<img class="resizeImage" src="${project.image}" alt="${project.title}"/>
 				<div class="gridElementOver">
@@ -32,6 +32,18 @@ $( document ).ready(function() {
 			</div>
 		`);
 	});
+
+	setTimeout(() => {
+		$('.grid').masonry({
+			// options
+			itemSelector: '.grid-item',
+			gutter: 10,
+			// horizontalOrder: false,
+			// percentPosition: true,
+			fitWidth: true,
+			columnWidth: 350
+		});
+	}, 100)
 });
 
 const getOffset = ( element ) => {

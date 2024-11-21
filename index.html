@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>SSF</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<link rel="icon" href="images/webIcon.ico" type="image/x-icon"/>
 		<link rel="shortcut icon" href="images/webIcon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -24,23 +24,17 @@
 			<image class="homeImage" src="images/serImg.png" alt="home Image"/>
 			<div class="homeParagraph1">Convierto ideas en código</div>
 		</div>
-		<div id="portfolio" class="panel">
-			<div class="backImage"><img class="section-back-image" src="images/portfolio.png" alt="portfolio back image"/></div>
+		<div id="portfolio" class="panel portfolio-bg">
 			<div class="content">
-				<div class="grid" id="grid">
-					<diV class="grid-column" id="column1"></diV>
-					<diV class="grid-column" id="column2"></diV>
-					<diV class="grid-column" id="column3"></diV>
+				<div class="grid-container">
+					<div class="grid" id="grid"></div>
 				</div>
 			</div>
 		</div>
-		<div id="about" class="panel">
-			<div class="backImage"><img class="section-back-image" src="images/perfil.png" alt="chat back image"/></div>
-			<div class="content">
+		<div id="about" class="panel about-bg">
+			<div class="chat-content">
 				<div class="contact-profile">
-					<div class="social-buttons">
-						<a href="https://linkedin.com/in/sergio-santamaria-78b844a4" target="_blanck"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-					</div>
+					<a href="https://linkedin.com/in/sergio-santamaria-78b844a4" target="_blanck"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 				</div>
 				<div class="messages">
 					<ul>
@@ -56,32 +50,29 @@
 				</div>
 			</div>
 		</div>
-		<div id="contact" class="panel">
-			<div class="backImage"><img class="section-back-image" src="images/mail.png" alt="contact back image"/></div>
+		<div id="contact" class="panel contact-bg">
 			<div class="content">
 				<form id="contact-form" method="POST">
 					<p>Hola Sergio,</p>
 					<p>
 						<label for="from_name">Mi nombre es</label>
-					    <input type="text" name="from_name" id="from_name" minlength="3" placeholder="(tu nombre aquí)" required></p>
-
+					    <input class="form-input" type="text" name="from_name" id="from_name" minlength="3" placeholder="(tu nombre aquí)" required></p>
 					<p>
 					    <label for="email">mi correo electrónico es</label>
-					    <input type="email" name="reply_to" id="email" placeholder="(tu correo aquí)" required>
+					    <input class="form-input" type="email" name="reply_to" id="email" placeholder="(tu correo aquí)" required>
 					</p>
-
 					<p>
 					    <label for="your-message">Tengo un mensaje para ti,</label>
-					    <textarea name="message" id="your-message" placeholder="(Tu mensaje aquí)" required></textarea>
+					    <textarea class="form-input" name="message" id="your-message" placeholder="(Tu mensaje aquí)" required></textarea>
 					</p>
-					<p>
+					<div class="form-buttons">
 					    <button class="formButton" type="button" value="send">
 						  <svg id="sendMaiButton" class="send-icn" version="1.1" viewBox="0 0 512 512" xml:space="preserve"><path d="M440.57709,128H71.42291c-3.07653,0-5.57073,2.4942-5.57073,5.57074v245.11243c0,3.07654,2.4942,5.57074,5.57073,5.57074  h369.15417c3.07654,0,5.57074-2.4942,5.57074-5.57074V133.57074C446.14783,130.4942,443.65363,128,440.57709,128z   M76.99365,166.4158c1.89034,1.92673,3.9827,3.68411,6.28379,5.21198l66.294,44.01848  c0.94777,0.62914,2.01735,0.93069,3.07652,0.93069c1.80344,0,3.57344-0.87497,4.646-2.49049  c1.70242-2.56328,1.00423-6.0201-1.5598-7.72177l-66.294-44.01848c-7.79383-5.1756-12.44651-13.84961-12.44651-23.20473h358.0127  c0,9.35512-4.65268,18.02988-12.4465,23.20471L271.4072,262.70932c-9.35962,6.21472-21.45477,6.21472-30.81511,0l-66.29399-44.01846  c-2.5618-1.70093-6.0201-1.00423-7.72177,1.55981c-1.70242,2.56328-1.00423,6.0201,1.55907,7.72177l42.40294,28.15451  L83.27744,340.62613c-2.30109,1.52786-4.39346,3.28525-6.28379,5.21198V166.4158z M76.99365,373.11243  c0-9.35513,4.65268-18.02988,12.44651-23.20471l131.16931-87.09439l13.82062,9.17688  c6.55119,4.35037,14.06053,6.52518,21.5699,6.52518c7.50934,0,15.01871-2.1748,21.57065-6.52518l13.82062-9.17688  l131.16931,87.09442c7.79309,5.17554,12.44577,13.84955,12.44577,23.20468H76.99365z M435.00635,345.8381  c-1.89035-1.92673-3.98196-3.68338-6.28305-5.21124l-127.26163-84.49991l127.26089-84.49918  c2.30109-1.52786,4.39346-3.28525,6.28378-5.21198V345.8381z"/></svg>
 					      <small class="sendButton">Enviar</small>
 						  <div id="emailConfirmButton" class="confirm-label">Mensaje enviado</div>
 						  <div id="emailErrorButton" class="error-label">Error en el envio</div>
 					    </button>
-					</p>
+					</div>
 					<div id="loadingCover" class="form-loading-cover">
 						<img src="images/simple-spinner.gif" class="loading-spinner" alt="spinnerImage"/>
 					</div>
@@ -97,7 +88,8 @@
 				<a id="link-contact" class="nav4" href="#contact"><span>4.</span>Contact</a>
 			</div>
 		</div>
-		<script src="js/jquery-3.2.1.js"></script>
+		<script src="libs/jquery-3.2.1.js"></script>
+		<script src="libs/masonry.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 		<script type="module" src="js/main.js"></script>
 	</body>
