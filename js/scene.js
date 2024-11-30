@@ -23,7 +23,9 @@ export const initRender = async () => {
 	const availableRooms = [
 		// { model: homeOffice, bloom: true, film: true, vignette: true },
 		{ model: comicRoom, bloom: true, film: true, vignette: true },
-		// { model: apocalypto, bloom: false, film: true, vignette: true }
+		// { model: apocalypto, bloom: false, film: true, vignette: true },
+		{ model: ninetysOffice, bloom: true, film: true, vignette: true },
+		{ model: ninetysOfficeCubicle, bloom: true, film: true, vignette: true },
 	];
 
 	const selectedRoom = availableRooms[Math.floor(Math.random() * availableRooms.length)];
@@ -162,6 +164,52 @@ export const initRender = async () => {
 				comicRoomModel.rotation.set( 0, 15, 0 );
 				comicRoomModel.scale.set( 1, 1, 1 );
 				rotationValues = { x: 0, y: 15, z: 0 };
+				comicRoomModel?.children?.forEach( obj => {
+					if (obj.isMesh && obj.material.map) {
+						obj.material.map.encoding = THREE.sRGBEncoding;
+					}
+				})
+				return resolve(comicRoomModel)
+
+			}, function ( xhr ) {
+				$('.loading')[0].innerText = `Loading ${Math.round((xhr.loaded / 33758656) * 100)}%`;
+			}, function ( e ) {
+				console.error( e );
+			});
+		})
+	}
+
+	function ninetysOffice(loader) {
+		return new Promise((resolve, reject) => {
+			loader.load( 'models/90s_office.glb', function ( gltf ) {
+				const comicRoomModel = gltf.scene;
+				comicRoomModel.position.set( 0, -0.3, 2 );
+				comicRoomModel.rotation.set( 0, 0, 0 );
+				comicRoomModel.scale.set( 1, 1, 1 );
+				rotationValues = { x: 0.5, y: -7.5, z: 0 };
+				comicRoomModel?.children?.forEach( obj => {
+					if (obj.isMesh && obj.material.map) {
+						obj.material.map.encoding = THREE.sRGBEncoding;
+					}
+				})
+				return resolve(comicRoomModel)
+
+			}, function ( xhr ) {
+				$('.loading')[0].innerText = `Loading ${Math.round((xhr.loaded / 33758656) * 100)}%`;
+			}, function ( e ) {
+				console.error( e );
+			});
+		})
+	}
+
+	function ninetysOfficeCubicle(loader) {
+		return new Promise((resolve, reject) => {
+			loader.load( 'models/90s_office_cubicle.glb', function ( gltf ) {
+				const comicRoomModel = gltf.scene;
+				comicRoomModel.position.set( 0, -4, -6 );
+				comicRoomModel.rotation.set( 0.3, -8.5, 0 );
+				comicRoomModel.scale.set( 1, 1, 1 );
+				rotationValues = { x: 0.3, y: -8.5, z: 0 };
 				comicRoomModel?.children?.forEach( obj => {
 					if (obj.isMesh && obj.material.map) {
 						obj.material.map.encoding = THREE.sRGBEncoding;
