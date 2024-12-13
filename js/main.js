@@ -12,7 +12,9 @@ const isDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/
 // -----  EXPERTISE PROYECTS -----
 
 $( document ).ready(function() {
-	emailjs.init(process.env.EMAIL_JS_USER);
+	emailjs.init({
+        publicKey: process.env.EMAIL_JS_USER,
+      });
 	christmasMode();
 	isDevice ? showSlideshow() : initRender();
 	const projectsData = expertise.getProjects();
