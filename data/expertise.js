@@ -268,6 +268,7 @@ export const expertise = {
             return acc;
         }, []));
         return {
+            listOfProjects,
             numOfProjects: listOfProjects.length,
             years: currentYear - numofYearsWorkingWith
         }

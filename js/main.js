@@ -7,6 +7,7 @@ import { initRender } from "../js/scene.js";
 let conversationStatus = 'none';
 let tecnologiaConsultada = '';
 let moreInfoInitialPosition = { left: 0, top: 0};
+let experiencia;
 const isDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // -----  EXPERTISE PROYECTS -----
@@ -139,31 +140,32 @@ function getMoment(hour){
 	return currentMoment;
 }
 
-const answerMessage = () => {
+const answerLoadingMessage = () => {
 
-	$('<li class="replies"><img src="images/serImg.png" alt="" /><p>' + ".  .  ." + '</p></li>').appendTo($('.messages ul'));
+	$('<li class="replies"><img class="bot-reply-image" src="images/serImg.png" alt="bot-avatar-image"/><p class="message-paragraph"><b>.  .  .</b></p></li>')
+		.appendTo($('.messages ul'));
 	$('.message-input input').val(null);
-	$('.contact.active .preview').html('<span>You: </span>' + ". . .");
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
 	
 }
 
 const newMessage = () => {
 	const message = $(".message-input input").val();
+
 	if($.trim(message) == '') {
 		return false;
 	}
-	$('<li class="sent"><img src="images/anonimous.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+
+	$(`<li class="sent"><img src="images/anonimous.png" alt="" /><p class="message-paragraph">${message}</p></li>`).appendTo($('.messages ul'));
 	$('.message-input input').val(null);
-	$('.contact.active .preview').html('<span>You: </span>' + message);
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
-	answerMessage();
+	answerLoadingMessage();
 	languageProcessing(message);
 };
 
-const getAfirmativeResponse = (lastTech) => {
+const getAfirmativeResponse = (listOfTechs, tecnologia) => {
 	return {
-		experiencia: `Estoy trabajando en la mejor forma de contarte los proyectos en los que Sergio ha trabajado relacionados con ${lastTech}. De momento, te puedo recomendar que pinches <a href="#portfolio"><b>aquí</b></a> para navegar a la sección de proyectos.`,
+		experiencia: giveProjectsListResponse(listOfTechs, tecnologia),
 		saludo: '¿Que quieres preguntar?',
 		none: '¿si que?'
 	}[conversationStatus];
@@ -179,32 +181,74 @@ const getNegativeResponse = () => {
 	conversationStatus = 'none';
 }
 
+const giveExperienciaData = (numOfProjects, lastYear, tecnologia) => {
+	return numOfProjects 
+		? `Sergio ha trabajado en <b>${numOfProjects}</b> proyectos de <b>${tecnologia}</b> en los últimos <b>${lastYear} años</b>. ¿Quieres saber cuales son esos proyectos?.`
+		: `De momento no me consta que Sergio haya empleado <b>${tecnologia}</b> en ninguno de sus proyectos, lo siento.`
+}
+
+const giveProjectsListResponse = async (projects, tecnologia) => {
+
+	projects.push({});
+
+	const printMessage = (message) => {
+		return new Promise((resolve) => {
+			answerLoadingMessage();
+			setTimeout(() => {
+				generateSimpleMessagge(message);
+				return resolve();
+			}, 1500);
+		});
+	}
+
+	generateSimpleMessagge(`<div>Te muestro una recopilacion de proyectos en los que sergio ha utilizado <b>${tecnologia}</b>: </div>`);
+
+	for ( const project of projects ) {
+		const answwer = project.id
+			? `<div class="reply-tech-suggestion-container" onClick="openMoreInfo('${project.id}')">
+					<img class="reply-tech-suggestion-image" src="${project.image}" class="chat-project-list-image"/>
+					<div class="reply-tech-suggestion-description">
+						<div><b>${project.title}</b></div>
+						<div>${project.description}</div>
+					</div>
+				</div>`
+			: `<div>Puedes hacer click en cualquiera de ellas para obtener mas información.</div>`;
+
+		await printMessage(answwer);
+	}
+};
+
+const generateSimpleMessagge = (message) => {
+	$(".messages ul li:last-child p").html(message).addClass("message-show");
+};
+
 const languageProcessing = (textToProcess) => {
-	let experiencia;
 	const q = encodeURIComponent(textToProcess);
 	const uri = process.env.API_URL + q;
 	const auth = process.env.API_KEY;
 	fetch(uri, {headers: {Authorization: auth}})
 	.then(res => res.json())
 	.then(response => {
-		const intent = response.entities?.['intent:intents']?.[0]?.value || 'default';
-		console.log(intent)
-		if (response.entities?.['tect_type:tect_type']) {
-			tecnologiaConsultada = response.entities['tect_type:tect_type'][0].value;
-			experiencia = expertise.giveTechExperience(tecnologiaConsultada.toLowerCase());
-		}
-		const responseOptions = {
-			saludo: getMoment(new Date().getHours()) + ", ¿tienes una pregunta para mi?",
-			experiencia: `Sergio ha trabajado en ${experiencia?.numOfProjects} proyectos de ${tecnologiaConsultada} en los últimos ${experiencia?.years} años. ¿Quieres saber cuales son esos proyectos?.`,
-			proyectos: `Estoy trabajando en la mejor forma de contarte los proyectos en los que Sergio ha trabajado relacionados con ${tecnologiaConsultada}. De momento, te puedo recomendar que pinches <a href="#portfolio"><b>aquí</b></a> para navegar a la sección de proyectos.`,
-			opciones: "Puedes preguntarme por la experiencia que tiene Sergio en una tecnologia concreto o por los proyectos en los que ha trabajado usando esta misma, y yo te respondere como buenamente pueda :-).",
-			despedida: "¿nos vemos pronto?",
-			afirmacion: getAfirmativeResponse(tecnologiaConsultada),
-			negacion: getNegativeResponse(tecnologiaConsultada),
-			default: "Todavia me estoy entrenando y hay algunas cosas que aún no entiendo, pero gracias a ti iré mejorando!! ;-)"
-		};
 
-		$(".messages ul li:last-child p").html(responseOptions[intent]);
+		const intent = response.intents?.[0]?.name || 'default';
+
+		if (response.entities?.['tech_type:tech_type']) {
+			tecnologiaConsultada = response.entities['tech_type:tech_type'][0].value;
+			experiencia = expertise.giveTechExperience(tecnologiaConsultada.toLowerCase());
+			console.log('tecnologa consultada: ', tecnologiaConsultada);
+		}
+
+		const responseOptions = {
+			saludo: () => generateSimpleMessagge(`${getMoment(new Date().getHours())}, ¿tienes una pregunta para mi?`),
+			experiencia: () => generateSimpleMessagge(giveExperienciaData(experiencia?.numOfProjects, experiencia?.years, tecnologiaConsultada)),
+			proyectos: () => giveProjectsListResponse(experiencia?.listOfProjects, tecnologiaConsultada),
+			opciones: () => generateSimpleMessagge("Puedes preguntarme por la experiencia que tiene Sergio en una tecnologia concreta o por los proyectos en los que ha trabajado usando esta misma, y yo te respondere como buenamente pueda :-)."),
+			despedida: () => generateSimpleMessagge("¿nos vemos pronto?"),
+			afirmacion: () => generateSimpleMessagge(getAfirmativeResponse(experiencia?.listOfProjects, tecnologiaConsultada)),
+			negacion: () => generateSimpleMessagge(getNegativeResponse(tecnologiaConsultada)),
+			default: () => generateSimpleMessagge("Todavia me estoy entrenando y hay algunas cosas que aún no entiendo, pero gracias a ti iré mejorando!! ;-)")
+		}[intent]();
+		
 		conversationStatus = ['experiencia', 'saludo'].includes(intent) ? intent : 'none';
 	});
 }

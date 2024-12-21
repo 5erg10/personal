@@ -783,16 +783,41 @@ textarea::placeholder {
   align-items: flex-start;
   justify-content: flex-start;
   margin: 1rem 0 2rem 0;
+  max-height: 500px;
 }
 
 .replies {
   flex-direction: row-reverse;
+  transition: max-height 1s ease-in-out;
 }
 
-.replies img {
+.reply-tech-suggestion-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.reply-tech-suggestion-image {
+  width: 80px;
+  cursor: pointer;
+}
+
+.reply-tech-suggestion-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  width: 300px;
+}
+
+.bot-reply-image {
   width: 50px;
+  height: 50px;
   border-radius: 50px;
-  margin: 0 0 0 1rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .sent img {
@@ -801,11 +826,11 @@ textarea::placeholder {
   margin: 0 1rem 0 0;
 }
 
-.replies p, .sent p {
+.message-paragraph {
   font-size: 16px;
-  padding: 1rem;
+  padding: 1rem 1rem;
   border-radius: 0.1rem;
-  width: 100%;
+  overflow: hidden;
 }
 
 .replies p {
@@ -1034,6 +1059,14 @@ textarea::placeholder {
 
   .message-input input {
     padding: 0 0 0 1rem;
+  }
+
+  .reply-tech-suggestion-image {
+    display: none;
+  }
+  
+  .reply-tech-suggestion-description {
+    width: 250px;
   }
 
   #contact-form {
