@@ -284,6 +284,7 @@ window.openMoreInfo = ( projectId ) => {
 				</div>
 				<div class="moreInfotitleBox">
 					<div class="moreInfotitle">${projectData.title} (${projectData.year})</div>
+					<a href="${projectData.link}" target="_blank">${projectData.link ? 'Link: Prototipo' : ''}</a>
 				</div>
 				<div class="moreInfoContent">
 					<div class="moreInfoContentResume">${projectData.resume}</div>

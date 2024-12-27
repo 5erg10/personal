@@ -961,14 +961,17 @@ textarea::placeholder {
 }
 
 .moreInfotitleBox {
-  padding: 1rem 0rem 1rem 2rem;
+  padding: 1rem 2rem;
+  border-bottom: solid 2px var(--main-yelow-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .moreInfotitle {
   color: var(--main-white-color);
   font-size: 2rem;
-  border-bottom: solid 2px var(--main-yelow-color);
-  line-height: 4rem;
 }
 
 .moreInfoContent {
