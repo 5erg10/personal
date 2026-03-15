@@ -141,7 +141,7 @@ export const expertise = {
             image: "images/nextHotel.png",
             id: "hubHotel",
             title: "Hub Hotel",
-            link: "https://5erg10.github.io/hubHotel/",
+            link: "http://84.121.254.205:3000",
             description: "El usuario puede recorer diferentes oficinas y puede ver en tiempo real a otros usuarios y chatear con ellos.",
             resume: "<p>En la empresa se detecto una problemática. Muchos empleados que trabajan fuera de la sede en clientes externos nunca han estado en otras sedes o solo un par de veces, por lo que cuando tienen que ir por una formacion o para hacer gestiones, se encuentran perdidos y no saben localizar las zonas que les interesan.</p><br><p><b>HubHotel</b> es un entorno 3d interactivo creado con <b>ThreeJs</b> en el que los empleados pueden seleccionar un avatar y una sede y recorrerla con libertad para localizar los puntos que son de su interes.</p><br><p>A su vez, y gracias a un servidor de <b>WebSocket</b>, se podrá encontrar en tiempo real con otros usuarios conectados que tambien esten recorriendo la sede para poder chatear con ellos.</p>",
             techs: [{ tech: "ThreeJS", complexity: "90"},{ tech: "SocketIO", complexity: "90"},{ tech: "MongoDB", complexity: "70"},{ tech: "Express", complexity: "70"},{ tech: "NodeJS", complexity: "70"}],
