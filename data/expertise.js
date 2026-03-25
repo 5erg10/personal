@@ -129,7 +129,7 @@ export const expertise = {
             title: "Quijote 2077",
             link: "https://quijote.5erg10.com",
             description: "Aventura gráfica conversacional inspirada en la de los años 80.",
-            resume: "<p>El objetivo era poder trabajar y testear tecnologías como <b>dialogFlow</b> o <b>fireBase</b>.</p><br><p>Para ello ideé un videojuego de tipo conversacional en el que ir descifrando los diferentes enigmas y avanzar en el juego, al estilo de juegos de los años 80 como el prisionero del hielo.</p>",
+            resume: "<p>Proyecto iniciado con el objetivo de evaluar <b>dialogFlow</b> como motor de PNL.</p><br><p>La aplicaciòn consiste en un juego de tipo conversacional en el que se interacciona con una interfaz de chat para avanzar y resolver las situaciones que se presentan inspirado en las antigûas aventuras conversacionales de los años 70 y 80 como <i>'prisionero en el hielo'</i>.</p><p>Màs recientemente he iterado sobre este proyecto para cambiar <b>Dialog Flow</b> como motor de PNL por diferentes motores LLM como <b>Groq</b> y <b>Cerebra</b> que son capaceds de analizar oraciones màs complejas e inprovisar respuestas mas elaboradas. El sistema Va alternando entre diferentes motores en funcion de los tokens de uso libre que tenga libre cada uno.</p>",
             techs: [{ tech: "SocketIO", complexity: "70"},{ tech: "Dialogflow", complexity: "50"},{ tech: "Firebase", complexity: "50"},{ tech: "NodeJS", complexity: "70"}],
             areas: ["front", "ia", "chatbot"],
             media: {
