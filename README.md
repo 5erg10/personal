@@ -35,25 +35,42 @@ base: '/personal/',
 npm run build
 ```
 
-### 3. Deploy `dist/` to the `gh-pages` branch
+### 3. Stage and commit `dist/`
 
 > `dist/` is in `.gitignore` so the `-f` flag is required.
-
-If the `gh-pages` branch **does not exist** yet (first deploy or after deleting it):
 
 ```bash
 git add dist -f
 git commit -m "deploy"
-git push origin $(git subtree split --prefix dist):gh-pages
 ```
 
-If the `gh-pages` branch **already exists** and has incompatible history, delete it first on GitHub, then use the commands above.
+### 4. Deploy to `gh-pages` branch
 
-### 4. Configure GitHub Pages
+**First deploy or after resetting the branch:**
 
-In the repo: **Settings → Pages → Branch: `gh-pages` → folder: `/ (root)` → Save**
+```bash
+git subtree push --prefix dist origin gh-pages
+```
 
-Site will be available at: `https://5erg10.github.io/personal/`
+**If the push fails due to incompatible history, reset the remote branch first:**
+
+```bash
+git push origin :gh-pages
+git subtree push --prefix dist origin gh-pages
+```
+
+> `git push origin :gh-pages` deletes the remote branch. The second command recreates it from `dist/`.
+
+### 5. Configure GitHub Pages
+
+Go to: `https://github.com/5erg10/personal/settings/pages`
+
+1. Under **"Build and deployment"** → **Source**: select `Deploy from a branch`
+2. Under **"Branch"**: select `gh-pages` and folder `/ (root)`
+3. Click **Save**
+
+GitHub will take 1-2 minutes to publish. Site will be available at:
+`https://5erg10.github.io/personal/`
 
 ---
 
