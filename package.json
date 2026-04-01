@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:gh": "vite build --base=/personal/ && git add dist -f && git commit --allow-empty -m \"deploy gh-pages\" && git subtree push --prefix dist origin gh-pages",
+    "deploy:netlify": "vite build && git add dist -f && git commit --allow-empty -m \"deploy netlify\" && git subtree push --prefix dist origin netlify-deploy",
+    "deploy": "npm run deploy:gh && npm run deploy:netlify"
   },
   "dependencies": {
     "react": "^18.3.0",
