@@ -26,14 +26,13 @@ export default function PortfolioCard({ project }) {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
             className="text-[var(--yellow)] font-mono text-xs hover:underline"
           >
             · Prototipo
           </a>
         )}
         <button
-          onClick={(e) => { e.stopPropagation(); dispatch({ type: 'showProject', project }) }}
+          onClick={() => dispatch({ type: 'showProject', project })}
           className="text-[var(--yellow)] font-mono text-xs hover:underline cursor-pointer"
         >
           + info
@@ -54,19 +53,8 @@ export default function PortfolioCard({ project }) {
     </div>
   )
 
-  if (project.video) {
-    return (
-      <div
-        className="portfolio-card w-[350px] min-h-[230px] relative cursor-pointer"
-        onClick={() => dispatch({ type: 'showVideo', url: project.video })}
-      >
-        {inner}
-      </div>
-    )
-  }
-
   return (
-    <div className="portfolio-card w-[350px] min-h-[230px] relative">
+    <div className="portfolio-card w-[350px] min-h-57.5 h-57.5 md:h-auto relative">
       {inner}
     </div>
   )

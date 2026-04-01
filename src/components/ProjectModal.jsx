@@ -122,7 +122,7 @@ export default function ProjectModal() {
             {project.media?.videos?.map((vid) => (
               <SkeletonIframe
                 key={vid}
-                src={`https://www.youtube.com/embed/${vid}`}
+                src={`https://www.youtube-nocookie.com/embed/${vid}`}
                 title={project.title}
               />
             ))}

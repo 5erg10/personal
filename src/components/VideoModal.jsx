@@ -6,11 +6,11 @@ export default function VideoModal() {
 
   if (!open) return null
 
-  const isYoutube = url && (url.includes('youtube.com') || url.includes('youtu.be'))
+  const isYoutube = url && (url.includes('youtube.com') || url.includes('youtube-nocookie.com') || url.includes('youtu.be'))
 
   return (
     <div
-      className="fixed inset-0 z-[900] bg-black/85 flex items-center justify-center"
+      className="fixed inset-0 z-900 bg-black/85 flex items-center justify-center"
       onClick={() => dispatch({ type: 'hideVideo' })}
     >
       <div
@@ -18,7 +18,7 @@ export default function VideoModal() {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="absolute -top-8 right-0 text-[var(--yellow)] font-mono text-lg hover:opacity-70"
+          className="absolute -top-8 right-0 text-(--yellow) font-mono text-lg hover:opacity-70"
           onClick={() => dispatch({ type: 'hideVideo' })}
         >
           ✕ cerrar
