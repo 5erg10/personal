@@ -234,4 +234,17 @@ export const PROJECTS = [
     media: { videos: ['YMS2XdAFsP0'], images: ['liveshop_snapshot_1.png', 'liveshop_snapshot_2.png', 'liveshop_snapshot_3.png'] },
     year: '2020',
   },
+  {
+    id: 'd3Vis',
+    title: 'D3 data visualization',
+    image: 'images/d3Vis.jpg',
+    url: 'https://5erg10.github.io/react-data-visualization/',
+    video: null,
+    description: 'Visualización de datos sobre tendencias tecnologicas creado con react.js y d3.js.',
+    resume: '<p>Prueba de concepto para testar la integración de d3.js en un entorno de react para visualizar datos de tendencias tecnologicas.</p><p>Los datos se extraian de un script automatico que obtiene por cada tecnologia informacion sobre numero de estrellas en github, numero de comentarios en stackoverflow, etc... y con todos esos parametros se genera un promedio de relevancia de cada tecnologia en una fecha determinada.</p>',
+    techs: [{ tech: 'ReactJS', complexity: '70' }, {tech: 'd3js', complexity: 80}],
+    areas: ['front'],
+    media: { videos: [], images: ['react-d3-vis_1.png', 'react-d3-vis_2.png', 'react-d3-vis_3.png'] },
+    year: '2026',
+  },
 ]
